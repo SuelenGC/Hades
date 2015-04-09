@@ -11,19 +11,6 @@ public class LocalizacaoTest {
 		return new Localizacao(1L, "Rua do Meio do Nada", "Bairro Acre", 666, "Ultima Cidade do Universo", "", 
 				"0234150666", br.com.hades.domain.Estado.AC);
 	}
-//	@Test
-//	public void testaInicializacao()
-////	{(Long id, String endereco, String bairro, int numero,
-////			String cidade, String complemento, String cep, Estado estado)
-//	{
-//		Localizacao loc = new Localizacao(new Long(1), "Rua do Meio do Nada", "Bairro Acre", 666, "Ultima Cidade do Universo", "", 
-//				"0234150666", br.com.hades.domain.Estado.AC);
-//		assertTrue(loc.getEndereco()=="Rua do Meio do Nada");
-//		assertTrue(loc.getBairro()=="Bairro Acre");
-//		loc.setBairro("Bairro barrento");
-//		assertTrue(loc.getBairro()=="Bairro barrento");
-//		assertFalse(loc.getBairro()=="Bairro Acre");
-//	}
 	
 	@Test
 	public void testaGetID()
@@ -62,9 +49,6 @@ public class LocalizacaoTest {
 	{
 		Localizacao loc = instancia();
 		assertTrue(loc.getBairro()=="Bairro Acre");
-//		loc.setBairro("Bairro barrento");
-//		assertTrue(loc.getBairro()=="Bairro barrento");
-//		assertFalse(loc.getBairro()=="Bairro Acre");
 	}
 	
 	@Test

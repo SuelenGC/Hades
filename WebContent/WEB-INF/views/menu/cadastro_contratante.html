@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Bootstrap Core CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="cadastro_contratante.css" rel="stylesheet"/>
+	<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container" id="cabecalho">
+			<a class="navbar-brand" href="#">Brand</a>
+        	<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+    	</div>
+    </nav>
+    <div class="caixa_barra_progresso" id="barra_de_progresso">
+    	<ul class="barra_progresso">
+			<li class="visited first">
+      			<a href="#">Login</a>
+    		</li>
+    		<li class="previous visited">Shipping & Billing</li>
+    		<li class="active">Shipping Options</li>
+    		<li class="next">Review & Payment</li>
+    		<li class="">Complete</li>
+  		</ul>
+    </div>
+    <div class="container" id="formulario-dados-pessoais">
+        <div class="well">
+    	   <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">Example block-level help text here.</p>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
+<script>
+	$('#CPF').mask("999.999.999-99");
+</script>
+</html>

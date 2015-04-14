@@ -3,13 +3,12 @@ import org.junit.* ;
 
 import br.com.hades.domain.Estado;
 import static org.junit.Assert.* ;
-import br.com.hades.domain.Estado;
 public class LocalizacaoTest {
 	
 	Localizacao instancia()
 	{
 		return new Localizacao(1L, "Rua do Meio do Nada", "Bairro Acre", 666, "Ultima Cidade do Universo", "", 
-				"0234150666", br.com.hades.domain.Estado.AC);
+				"0234150666", Estado.AC);
 	}
 	
 	@Test
@@ -32,7 +31,7 @@ public class LocalizacaoTest {
 	public void testaGetEndereco()
 	{
 		Localizacao loc = instancia();
-		assertTrue(loc.getEndereco()=="Rua do Meio do Nada");
+		assertTrue(loc.getEndereco().equals("Rua do Meio do Nada"));
 	}
 	
 	@Test
@@ -40,15 +39,15 @@ public class LocalizacaoTest {
 	{
 		Localizacao loc = instancia();
 		loc.setEndereco("Rua Blah");
-		assertTrue(loc.getEndereco()=="Rua Blah");
-		assertFalse(loc.getEndereco()=="Rua do Meio do Nada");
+		assertTrue(loc.getEndereco().equals("Rua Blah"));
+		assertFalse(loc.getEndereco().equals("Rua do Meio do Nada"));
 	}
 	
 	@Test
 	public void testaGetBairro()
 	{
 		Localizacao loc = instancia();
-		assertTrue(loc.getBairro()=="Bairro Acre");
+		assertTrue(loc.getBairro().equals("Bairro Acre"));
 	}
 	
 	@Test
@@ -56,8 +55,8 @@ public class LocalizacaoTest {
 	{
 		Localizacao loc = instancia();
 		loc.setBairro("Bairro barrento");
-		assertTrue(loc.getBairro()=="Bairro barrento");
-		assertFalse(loc.getBairro()=="Bairro Acre");
+		assertTrue(loc.getBairro().equals("Bairro barrento"));
+		assertFalse(loc.getBairro().equals("Bairro Acre"));
 	}
 	
 	@Test
@@ -79,7 +78,7 @@ public class LocalizacaoTest {
 	public void testaGetComplemento()
 	{
 		Localizacao loc = instancia();
-		assertTrue(loc.getComplemento()=="");
+		assertTrue(loc.getComplemento().equals(""));
 	}
 	
 	@Test
@@ -87,14 +86,14 @@ public class LocalizacaoTest {
 	{
 		Localizacao loc = instancia();
 		loc.setComplemento("Comp");
-		assertTrue(loc.getComplemento()=="Comp");
+		assertTrue(loc.getComplemento().equals("Comp"));
 	}
 	
 	@Test
 	public void testaGetCidade()
 	{
 		Localizacao loc = instancia();
-		assertTrue(loc.getCidade()=="Ultima Cidade do Universo");
+		assertTrue(loc.getCidade().equals("Ultima Cidade do Universo"));
 	}
 
 	@Test
@@ -102,15 +101,15 @@ public class LocalizacaoTest {
 	{
 		Localizacao loc = instancia();
 		loc.setCidade("Pindamonhangaba");
-		assertTrue(loc.getCidade()=="Pindamonhangaba");
-		assertFalse(loc.getCidade()=="Ultima Cidade do Universo");
+		assertTrue(loc.getCidade().equals("Pindamonhangaba"));
+		assertFalse(loc.getCidade().equals("Ultima Cidade do Universo"));
 	}
 	
 	@Test
 	public void testaGetCep()
 	{
 		Localizacao loc = instancia();
-		assertTrue(loc.getCep()=="0234150666");
+		assertTrue(loc.getCep().equals("0234150666"));
 	}
 
 	@Test
@@ -118,8 +117,8 @@ public class LocalizacaoTest {
 	{
 		Localizacao loc = instancia();
 		loc.setCep("84823743");
-		assertTrue(loc.getCep()=="84823743");
-		assertFalse(loc.getCep()=="0234150666");
+		assertTrue(loc.getCep().equals("84823743"));
+		assertFalse(loc.getCep().equals("0234150666"));
 	}
 
 	@Test

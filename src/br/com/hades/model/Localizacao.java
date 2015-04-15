@@ -21,16 +21,82 @@ public class Localizacao {
 	private String bairro;
 	
 	@NotNull	
-	private int numero;
+	private int numeroEndereco;
 	
 	@NotNull	
 	private String cidade;
 	
-	private String complemento;
+	private String complementoEndereco;
 	
 	@NotNull	
 	private String cep;
 	
 	@NotNull
 	private Estado estado;
+	
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public int getNumeroEndereco() {
+		return numeroEndereco;
+	}
+
+	public void setNumeroEndereco(int numeroEndereco) {
+		this.numeroEndereco = numeroEndereco;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+
+	public String getComplementoEndereco() {
+		return complementoEndereco;
+	}
+
+	public void setComplementoEndereco(String complementoEndereco) {
+		this.complementoEndereco = complementoEndereco;
+	}
 }

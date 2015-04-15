@@ -320,8 +320,8 @@ public class Falecido {
 		return idadeMae;
 	}
 
-	public void setIdadeMae(int idadeMae) {
-		this.idadeMae = idadeMae;
+	public void setIdadeMae(int idadeNova) {
+		this.idadeMae = idadeNova;
 	}
 
 	public String getProfissaoMae() {

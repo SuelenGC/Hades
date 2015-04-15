@@ -1,8 +1,8 @@
 package br.com.hades.model;
 import org.junit.* ;
-
 import br.com.hades.domain.Estado;
 import static org.junit.Assert.* ;
+
 public class LocalizacaoTest {
 	
 	Localizacao instancia()

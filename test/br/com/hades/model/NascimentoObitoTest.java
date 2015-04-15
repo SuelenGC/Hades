@@ -1,20 +1,20 @@
 package br.com.hades.model;
 
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.*;
 import java.util.Calendar;
-
-import org.junit.Test;
-
+import java.util.GregorianCalendar;
+import org.junit.*;
 import br.com.hades.domain.EstadoCivil;
 
-//TODO testar Calendar
-
 public class NascimentoObitoTest {
+
+	Calendar cal1 = new GregorianCalendar(2007, 1, 1);
+	Calendar cal2 = new GregorianCalendar(2012, 9, 5);
+	
 	NascimentoObito instancia() {
 		Testemunha t1 = new Testemunha(1L, "Fulano", EstadoCivil.Casado, "Brasileiro", "Desempregado", "Rua X", "Consolacao");
 		Testemunha t2 = new Testemunha(1L, "Beltrano", EstadoCivil.Solteiro, "Americano", "Advogado", "Rua A", "Campo Limpo");
-		return new NascimentoObito ("Hospital X", null, "8:00", "Papi", "Grandpa", "Mami", "Grandma", t1, t2, 36, "Normal" );
+		return new NascimentoObito ("Hospital X", cal1, "8:00", "Papi", "Grandpa", "Mami", "Grandma", t1, t2, 36, "Normal" );
 	}
 	
 	@Test
@@ -23,6 +23,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getLocalNascimento() .equals("Hospital X"));
 	}
+	
 	@Test
 	public void testaSetLocalNascimento()
 	{
@@ -32,11 +33,28 @@ public class NascimentoObitoTest {
 	}
 	
 	@Test
+	public void testaDataNascimento()
+	{
+		NascimentoObito no = instancia();
+		assertTrue(no.getDataNascimento().equals(cal1));
+	}
+	
+	@Test
+	public void testaSetDataNascimento()
+	{
+		NascimentoObito no = instancia();
+		no.setDataNascimento(cal2);
+		assertTrue(no.getDataNascimento().equals(cal2));
+		assertFalse(no.getDataNascimento().equals(cal1));
+	}
+	
+	@Test
 	public void testaHorarioNascimento()
 	{
 		NascimentoObito no = instancia();
 		assertTrue(no.getHorarioNascimento() .equals("8:00"));
 	}
+	
 	@Test
 	public void testaSetHorarioNascimento()
 	{
@@ -51,6 +69,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getGravidez() .equals("Normal"));
 	}
+	
 	@Test
 	public void testaSetNome()
 	{
@@ -65,6 +84,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getAvoPaterno() .equals("Papi"));
 	}
+	
 	@Test
 	public void testaSetAvoPaterno()
 	{
@@ -79,6 +99,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getAvoMaterno() .equals("Grandpa"));
 	}
+	
 	@Test
 	public void testaSetAvoMaterno()
 	{
@@ -93,6 +114,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getAvoPaterna() .equals("Mami"));
 	}
+	
 	@Test
 	public void testaSetAvoPaterna()
 	{
@@ -107,6 +129,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getAvoMaterna() .equals("Grandma"));
 	}
+	
 	@Test
 	public void testaSetAvoMaterna()
 	{
@@ -121,6 +144,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getTestemunha1().getEndereco().equals("Rua X"));
 	}
+	
 	@Test
 	public void testaSetTestemuha1()
 	{
@@ -136,6 +160,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getTestemunha2().getEndereco().equals("Rua A"));
 	}
+	
 	@Test
 	public void testaSetTestemuha2()
 	{
@@ -151,6 +176,7 @@ public class NascimentoObitoTest {
 		NascimentoObito no = instancia();
 		assertTrue(no.getSemanasGestacao()==36);
 	}
+	
 	@Test
 	public void testaSetSemanasGestacao()
 	{

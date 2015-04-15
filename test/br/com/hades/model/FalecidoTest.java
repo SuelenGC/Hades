@@ -6,30 +6,25 @@ import br.com.hades.domain.Documento;
 import br.com.hades.domain.EstadoCivil;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Date;
 
 import org.junit.* ;
-
 import static org.junit.Assert.* ;
-import br.com.hades.domain.EstadoCivil;
+
 public class FalecidoTest {
 
-
-	Localizacao loc = new Localizacao(1L, "Rua do Meio do Nada", "Bairro Acre", 666, "Ultima Cidade do Universo"
-			, "", "0234150666", Estado.AC);
+	Localizacao loc = new Localizacao(1L, "Rua do Meio do Nada", "Bairro Acre", 666, 
+			                          "Ultima Cidade do Universo", "", "0234150666", Estado.AC);
 	Localizacao loc2 = new Localizacao(2L, "Rua do Matao", "Butanta", 1100, "Sao Paulo", "", 
-					"06540900", Estado.SP);
-	
+					                   "06540900", Estado.SP);
 	Calendar cal1 = new GregorianCalendar(2007, 1, 1);
-	
 	Calendar cal2 = new GregorianCalendar(2012, 9, 5);
 
 	Falecido instancia()
 	{		
 		return new Falecido(3L, "Manuela", Sexo.Feminino, Cor.Branca, "brasileira", cal1, 
-			"mecanico", Documento.RG, "85475685-7", "584135795-85", EstadoCivil.Solteiro, 
-			loc, true, true, true, true, true, true, 2, "mae maria", "brasileira", EstadoCivil.Casado, 80, 
-			"dona de casa", "pai jose", "brasileira", EstadoCivil.Casado, "pedreiro", 82, true);
+			                "mecanico", Documento.RG, "85475685-7", "584135795-85", EstadoCivil.Solteiro, 
+			                loc, true, true, true, true, true, true, 2, "mae maria", "brasileira", EstadoCivil.Casado, 80, 
+			                "dona de casa", "pai jose", "brasileira", EstadoCivil.Casado, "pedreiro", 82, true);
 	}
 	
 	@Test
@@ -38,6 +33,7 @@ public class FalecidoTest {
 		Falecido c = instancia();
 		assertTrue(c.getId()==3L);
 	}
+	
 	@Test
 	public void testaSetCartorio()
 	{
@@ -112,6 +108,7 @@ public class FalecidoTest {
 		Falecido c = instancia();
 		assertTrue(c.getNascimento().equals(cal1));
 	}
+	
 	@Test
 	public void testaSetNascimento()
 	{

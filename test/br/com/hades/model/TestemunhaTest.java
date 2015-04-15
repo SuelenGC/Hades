@@ -1,12 +1,11 @@
 package br.com.hades.model;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
-
+import static org.junit.Assert.*;
+import org.junit.*;
 import br.com.hades.domain.EstadoCivil;
 
 public class TestemunhaTest {
+	
 	Testemunha instancia() {
 		return new Testemunha(1L, "Fulano", EstadoCivil.Casado, "Brasileiro", "Desempregado", "Rua X", "Consolacao");
 	}
@@ -17,6 +16,7 @@ public class TestemunhaTest {
 		Testemunha t = instancia();
 		assertTrue(t.getId() == 1L);
 	}
+	
 	@Test
 	public void testaSetId()
 	{
@@ -31,6 +31,7 @@ public class TestemunhaTest {
 		Testemunha t = instancia();
 		assertTrue(t.getNome() .equals("Fulano"));
 	}
+	
 	@Test
 	public void testaSetNome()
 	{
@@ -45,6 +46,7 @@ public class TestemunhaTest {
 		Testemunha t = instancia();
 		assertTrue(t.getEstado() == EstadoCivil.Casado);
 	}
+	
 	@Test
 	public void testaSetEstado()
 	{
@@ -59,6 +61,7 @@ public class TestemunhaTest {
 		Testemunha t = instancia();
 		assertTrue(t.getNacionalidade() .equals("Brasileiro"));
 	}
+	
 	@Test
 	public void testaSetNacionalidade()
 	{
@@ -73,6 +76,7 @@ public class TestemunhaTest {
 		Testemunha t = instancia();
 		assertTrue(t.getProfissao() .equals("Desempregado"));
 	}
+	
 	@Test
 	public void testaSetProfissao()
 	{
@@ -87,6 +91,7 @@ public class TestemunhaTest {
 		Testemunha t = instancia();
 		assertTrue(t.getEndereco() .equals("Rua X"));
 	}
+	
 	@Test
 	public void testaSetEndereco()
 	{
@@ -101,6 +106,7 @@ public class TestemunhaTest {
 		Testemunha t = instancia();
 		assertTrue(t.getBairro() .equals("Consolacao"));
 	}
+	
 	@Test
 	public void testaSetBairro()
 	{
@@ -108,6 +114,4 @@ public class TestemunhaTest {
 		t.setBairro("Liberdade");
 		assertTrue(t.getBairro() .equals("Liberdade"));
 	}
-	
-	//Testemunha(1L, "Fulano", EstadoCivil.Casado, "Brasileiro", "Desempregado", "Rua X", "Consolacao");
 }

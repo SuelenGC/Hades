@@ -1,22 +1,23 @@
 package br.com.hades.model;
 import org.junit.* ;
 import static org.junit.Assert.* ;
+import br.com.hades.domain.Estado;
 
 public class ContratanteTest {
 	Contratante instancia()
 	{
 		return new Contratante(1L, "Fulano da Silva", "12341515", "5625252", "Estudante", "Filho", "(11)5511-5511", "(11)96666-6666",
 				"fulano.silva@gmail.com", "Mae do Fulano", new Localizacao(1L, "Rua do Meio do Nada", "Bairro Acre", 666, "Ultima Cidade do Universo", "", 
-				"0234150666", br.com.hades.domain.Estado.AC), "Fulanos SA", "512523526473");
+				"0234150666", Estado.AC), "Fulanos SA", "512523526473");
 	}
 
-	
 	@Test
 	public void testaId()
 	{
 		Contratante c = instancia();
 		assertTrue(c.getId()==1L);
 	}
+	
 	@Test
 	public void testaSetId()
 	{
@@ -25,13 +26,13 @@ public class ContratanteTest {
 		assertTrue(c.getId()==2L);
 	}
 	
-	
 	@Test
 	public void testaNome()
 	{
 		Contratante c = instancia();
 		assertTrue(c.getNome().equals("Fulano da Silva"));
 	}
+	
 	@Test
 	public void testaSetNome()
 	{
@@ -39,20 +40,21 @@ public class ContratanteTest {
 		c.setNome("Beltrano");
 		assertTrue(c.getNome().equals("Beltrano"));
 	}
-	
-	
+
 	@Test
 	public void testaCpf()
 	{
 		Contratante c = instancia();
 		assertFalse(c.getCpf() == "08574596412");
 	}
+	
 	@Test
 	public void testaCpf2()
 	{
 		Contratante c = instancia();
 		assertTrue(c.getCpf() == "12341515");
 	}
+	
 	@Test
 	public void testaCpf3()
 	{
@@ -60,14 +62,14 @@ public class ContratanteTest {
 		c.setCpf("012345678");
 		assertTrue(c.getCpf() == "012345678");
 	}
-	
-	
+
 	@Test
 	public void testaRg()
 	{
 		Contratante c = instancia();
 		assertTrue(c.getRg().equals("5625252"));
 	}
+	
 	@Test
 	public void testaSetRg()
 	{
@@ -82,6 +84,7 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getProfissao().equals("Estudante"));
 	}
+	
 	@Test
 	public void testaSetProfissao()
 	{
@@ -96,6 +99,7 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getGrauParentesco().equals("Filho"));
 	}
+	
 	@Test
 	public void testaSetGrauParentesco()
 	{
@@ -110,6 +114,7 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getTelResidencial().equals("(11)5511-5511"));
 	}
+	
 	@Test
 	public void testaSetTelResidencial()
 	{
@@ -124,6 +129,7 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getTelCelular().equals("(11)96666-6666"));
 	}
+	
 	@Test
 	public void testaSetTelCelular()
 	{
@@ -138,6 +144,7 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getEmail().equals("fulano.silva@gmail.com"));
 	}
+	
 	@Test
 	public void testaSetEmail()
 	{
@@ -152,6 +159,7 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getNomeMae().equals("Mae do Fulano"));
 	}
+	
 	@Test
 	public void testaSetNomeMae()
 	{
@@ -166,11 +174,12 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getLocalizacao().getEndereco().equals("Rua do Meio do Nada"));
 	}
+	
 	@Test
 	public void testaSetLocalizacao()
 	{
 		Contratante c = instancia();
-		Localizacao l = new Localizacao(3L, "Baker Street", "Elementar", 221, "Londres", "B", "53256414", br.com.hades.domain.Estado.SP);
+		Localizacao l = new Localizacao(3L, "Baker Street", "Elementar", 221, "Londres", "B", "53256414", Estado.SP);
 		c.setLocalizacao(l);
 		assertTrue(c.getLocalizacao().getEndereco().equals("Baker Street"));
 	}
@@ -181,6 +190,7 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getNomeEmpresarial().equals("Fulanos SA"));
 	}
+	
 	@Test
 	public void testaSetNomeEmpresarial()
 	{
@@ -195,6 +205,7 @@ public class ContratanteTest {
 		Contratante c = instancia();
 		assertTrue(c.getCnpj().equals("512523526473"));
 	}
+	
 	@Test
 	public void testaSetCnpj()
 	{

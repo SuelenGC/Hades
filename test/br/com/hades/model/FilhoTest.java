@@ -1,12 +1,12 @@
 package br.com.hades.model;
 
 import static org.junit.Assert.assertTrue;
-
+import br.com.hades.domain.CategoriaIdade;
 import org.junit.Test;
 
 public class FilhoTest {
 	Filho instancia() {
-		return new Filho(1L, "Filhao da Silva", br.com.hades.model.CategoriaIdade.Maior, "Nada a comentar");
+		return new Filho(1L, "Filhao da Silva", CategoriaIdade.Maior, "Nada a comentar");
 	}
 	
 	@Test
@@ -15,6 +15,7 @@ public class FilhoTest {
 		Filho f = instancia();
 		assertTrue(f.getId()==1L);
 	}
+	
 	@Test
 	public void testaSetId()
 	{
@@ -29,6 +30,7 @@ public class FilhoTest {
 		Filho f = instancia();
 		assertTrue(f.getNome().equals("Filhao da Silva"));
 	}
+	
 	@Test
 	public void testaSetNome()
 	{
@@ -41,14 +43,15 @@ public class FilhoTest {
 	public void testaIdade()
 	{
 		Filho f = instancia();
-		assertTrue(f.getIdade()==br.com.hades.model.CategoriaIdade.Maior);
+		assertTrue(f.getIdade()==CategoriaIdade.Maior);
 	}
+	
 	@Test
 	public void testaSetIdade()
 	{
 		Filho f = instancia();
-		f.setIdade(br.com.hades.model.CategoriaIdade.Menor);
-		assertTrue(f.getIdade()==br.com.hades.model.CategoriaIdade.Menor);
+		f.setIdade(CategoriaIdade.Menor);
+		assertTrue(f.getIdade()==CategoriaIdade.Menor);
 	}
 	
 	@Test
@@ -57,6 +60,7 @@ public class FilhoTest {
 		Filho f = instancia();
 		assertTrue(f.getObservacoes().equals("Nada a comentar"));
 	}
+	
 	@Test
 	public void testaSetObservacoes()
 	{

@@ -1,76 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br" contentType="text/html; charset=utf-8">
 <head>
 	<!-- Bootstrap Core CSS -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-	<link href="cadastro_contratante.css" rel="stylesheet"/>
-	<link href="style.css" rel="stylesheet"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="cadastro_contratante.css" rel="stylesheet"/>
+
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container" id="cabecalho">
-			<a class="navbar-brand" href="#">Brand</a>
-         <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
-     </div>
- </nav>
- <div class="caixa_barra_progresso" id="barra_de_progresso">
-     <ul class="barra_progresso">
-       <li class="visited first">
-         <a href="#">Login</a>
-     </li>
-     <li class="previous visited">Shipping & Billing</li>
-     <li class="active">Shipping Options</li>
-     <li class="next">Review & Payment</li>
-     <li class="">Complete</li>
- </ul>
-</div>
-<div class="container" id="formulario-dados-pessoais">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="well">
-                <h1>Dados pessoais</h1>
-                <form>
+			<a class="navbar-brand" href="#">Serviço</a>
+            <p class="navbar-text navbar-right">Usuário: <a href="#" class="navbar-link">João da Silva</a></p>
+        </div>
+    </nav>
+    <div class="caixa_barra_progresso" id="barra_de_progresso">
+       <ul class="barra_progresso">
+            <li class="visited first">
+                <a href="#">Entrar</a>
+            </li>
+            <li class="previous visited">Shipping & Billing</li>
+            <li class="active">Shipping Options</li>
+            <li class="next">Review & Payment</li>
+            <li class="">Complete</li>
+        </ul>
+    </div>
+    <div class="container" id="formulario-dados-pessoais">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="well" id="dadosPessoais">
+                    <h1 class="titulo_caixa">Dados pessoais</h1>
+                    <form>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nome completo</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>Nome completo</label>
+                                <input type="string" class="form-control" id="nomecompleto" placeholder="Nome Completo">
                             </div>
                         </div>                        
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nome da mae</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>Nome da mãe</label>
+                                <input type="string" class="form-control" id="nomedamae" placeholder="Nome da mãe">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">RG</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>RG</label>
+                                <input type="string" class="form-control" id="rg" placeholder="RG">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">CPF</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>CPF</label>
+                                <input type="string" class="form-control" id="CPF" placeholder="CPF" onkeypress="mascara(this,leech)">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Profissao</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>Profissão</label>
+                                <input type="string" class="form-control" id="profissao" placeholder="Profissão">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Parentesco</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <label>Parentesco</label>
+                                <input type="string" class="form-control" id="parentesco" placeholder="Parentesco">
                             </div>
                         </div>
                     </div>
@@ -78,30 +79,30 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="well">
-                <h1>Contatos</h1>
+            <div class="well" id="caixaContatos">
+                <h1 class="titulo_caixa">Contatos</h1>
                 <form>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tel Residencial</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>Tel Residencial</label>
+                                <input type="string" class="form-control" id="telresidencial" placeholder="Tel Residencial">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tel Celular</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>Tel Celular</label>
+                                <input type="string" class="form-control" id="telcelular" placeholder="Tel Celular">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tel Celular2</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>Tel Celular 2</label>
+                                <input type="string" class="form-control" id="telcelular" placeholder="Tel Celular 2">
                             </div>
                         </div>
                     </div>
@@ -109,8 +110,8 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <label>Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
                             </div>
                         </div>
                     </div>
@@ -120,64 +121,74 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-        <div class="well">
-            <h1>Endereco</h1>
-            <form>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Endereco</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <div class="well">
+                <h1 class="titulo_caixa">Endereço</h1>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Endereço</label>
+                                <input type="string" class="form-control" id="endereco" placeholder="Endereço">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>Número</label>
+                                <input type="number" class="form-control" id="endnumero" placeholder="Número">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Complemento</label>
+                                <input type="string" class="form-control" id="endcomplemento" placeholder="Complemento">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Numero</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Bairro</label>
+                                <input type="string" class="form-control" id="endbairro" placeholder="Bairro">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label>Cidade</label>
+                                <input type="string" class="form-control" id="endcidade" placeholder="Cidade">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>UF</label>
+                                <input type="string" class="form-control" id="endestado" placeholder="UF">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label>CEP</label>
+                                <input type="string" class="form-control" id="edCEP" placeholder="CEP">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Complemento</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Bairro</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Cidade</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Estado</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">CEP</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <nav>
+               <ul class="pager">
+                <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Anterior</a></li>
+                <li class="next"><a href="#">Próximo <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        </nav>
     </div>
+</div>
 </div>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
 <script>
-$('#CPF').mask("999.999.999-99");
+ $('#CPF').mask("999.999.999-99");
 </script>
 </html>

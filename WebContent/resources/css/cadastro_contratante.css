@@ -15,6 +15,16 @@
 #formulario-dados-pessoais{
   margin-top: 7%;
 }
+
+#nomeRGDigito{
+  margin-left: -55%;
+}
+
+#RGDigito{
+  width: 155%;
+  margin-left: -55%;
+}
+
 .titulo_caixa{
   margin-top: 0%;
   margin-bottom: 10px;

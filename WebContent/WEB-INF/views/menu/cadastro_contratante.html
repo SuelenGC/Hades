@@ -4,7 +4,7 @@
 	<!-- Bootstrap Core CSS -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="cadastro_contratante.css" rel="stylesheet"/>
+    <link href="../../../resources/css/cadastro_contratante.css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -15,7 +15,7 @@
         </div>
     </nav>
     <div class="caixa_barra_progresso" id="barra_de_progresso">
-       <ul class="barra_progresso">
+       <ul class="barra_progresso"> 
             <li class="visited first">
                 <a href="#">Entrar</a>
             </li>
@@ -48,16 +48,22 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-xs-5">
                             <div class="form-group">
                                 <label>RG</label>
-                                <input type="string" class="form-control" id="rg" placeholder="RG">
+                                <input type="string" class="form-control" id="RG" placeholder="RG" onkeypress="mascara(this,rg)" maxlength="12">
+                            </div>
+                           </div>
+                        <div class="col-xs-1">
+                            <div class="form-group">
+                                <label id="nomeRGDigito">Dígito</label>
+                                <input type="string" class="form-control" id="RGDigito" onkeypress="mascara(this,rg)" maxlength="1">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>CPF</label>
-                                <input type="string" class="form-control" id="CPF" placeholder="CPF" onkeypress="mascara(this,leech)">
+                                <input type="string" class="form-control" id="CPF" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
                             </div>
                         </div>
                     </div>
@@ -188,7 +194,5 @@
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
-<script>
- $('#CPF').mask("999.999.999-99");
-</script>
+<script type="text/javascript" src="../../../resources/js/cadastro_contratante.js"></script>
 </html>

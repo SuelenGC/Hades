@@ -19,3 +19,9 @@ function rg(v){
     v=v.replace(/[^0-9X]/g,"")                   
     return v
 }
+function email(){
+    //nome@ahaha.aas
+    //nome@aahah.asa.as
+    //alguma coisa @ alguma coisa, uma ou mais repeticoes de (. alguma coisa)
+    //.+[@].+[[\.].]+
+}

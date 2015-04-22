@@ -18,15 +18,12 @@ public class ContratanteController {
 
 	@RequestMapping("contratante/salvar")
 	public String salvar(Contratante contratante, Localizacao localizacao) {
-		//Pegar informações da tela
 		contratante.setLocalizacao(localizacao);
 		
-		//Salvar no banco
 		ContratanteDao contratantedao = new ContratanteDao();
 		contratantedao.inserir(contratante);
 		contratantedao.close();
 		
-		//Ir para próximo
 		return "contratante/ok";
 	}
 }

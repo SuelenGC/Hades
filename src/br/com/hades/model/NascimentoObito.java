@@ -37,11 +37,12 @@ public class NascimentoObito {
 	@NotNull
 	private String avoMaterna;
 	
-	//@NotNull
-	//private Testemunha testemunha1;
+	// TODO: Arrumar anotações do Hibernate para funcionar a criação da tabela com testemunha
+	// @NotNull
+	// private Testemunha testemunha1;
 	
-	//@NotNull
-	//private Testemunha testemunha2;
+	// @NotNull
+	// private Testemunha testemunha2;
 	
 	@NotNull
 	private int semanasGestacao;

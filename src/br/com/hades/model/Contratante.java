@@ -1,5 +1,6 @@
 package br.com.hades.model;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,7 +17,7 @@ public class Contratante {
 	private Long id;
 	
 	@NotNull
-	private String nome;
+	private String nomeCompleto;
 	
 	@NotNull 
 	private String cpf;
@@ -38,40 +39,23 @@ public class Contratante {
 	private String nomeMae;
 	
 	@NotNull
+	@Embedded
 	private Localizacao localizacao;
 
 	private String nomeEmpresarial;
 	private String cnpj;
+	
 	public Long getId() {
 		return id;
-	}
-	public Contratante(Long id, String nome, String cpf, String rg,
-			String profissao, String grauParentesco, String telResidencial,
-			String telCelular, String email, String nomeMae,
-			Localizacao localizacao, String nomeEmpresarial, String cnpj) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.cpf = cpf;
-		this.rg = rg;
-		this.profissao = profissao;
-		this.grauParentesco = grauParentesco;
-		this.telResidencial = telResidencial;
-		this.telCelular = telCelular;
-		this.email = email;
-		this.nomeMae = nomeMae;
-		this.localizacao = localizacao;
-		this.nomeEmpresarial = nomeEmpresarial;
-		this.cnpj = cnpj;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	public String getNomeCompleto() {
+		return nomeCompleto;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeCompleto(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
 	}
 	public String getCpf() {
 		return cpf;

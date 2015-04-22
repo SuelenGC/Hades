@@ -18,7 +18,7 @@ import br.com.hades.domain.Estado;
 public class Casamento {
 	@Id
 	@GeneratedValue
-	private Long id;
+	private long id;
 	
 	@NotNull
 	private String nome;

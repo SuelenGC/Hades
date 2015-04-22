@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br" contentType="text/html; charset=utf-8">
+<head>
+	<!-- Bootstrap Core CSS -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../../resources/css/cadastro_contratante.css" rel="stylesheet"/>
+    <link href="../../../resources/css/form_style.css" rel="stylesheet"/>
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container" id="cabecalho">
+			<a class="navbar-brand" href="#">Serviço</a>
+            <p class="navbar-text navbar-right">Usuário: <a href="#" class="navbar-link">João da Silva</a></p>
+        </div>
+    </nav>
+    <div class="caixa_barra_progresso" id="barra_de_progresso">
+       <ul class="barra_progresso"> 
+            <li class="visited first">
+                <a href="#">Entrar</a>
+            </li>
+            <li class="previous visited">Shipping & Billing</li>
+            <li class="active">Shipping Options</li>
+            <li class="next">Review & Payment</li>
+            <li class="">Complete</li>
+        </ul>
+    </div>
+    <div class="container" id="formulario-dados-pessoais">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="shadow">
+                    <div class="over-shadow">
+                        <div id="dadosPessoais">
+                            <h1 class="titulo_caixa">Dados pessoais</h1>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label>CPF</label>
+                                            <input type="string" class="form-control" id="CPF" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label>Nome completo</label>
+                                            <input type="string" class="form-control" id="nomecompleto" placeholder="Nome Completo">
+                                        </div>
+                                    </div>                        
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-10">
+                                        <div class="form-group">
+                                            <label>RG</label>
+                                            <input type="string" class="form-control" id="RG" placeholder="RG" onkeypress="mascara(this,rg)" maxlength="12">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 col-xs-1" id="nomeRGDigito">
+                                        <div class="form-group">
+                                            <label>Dígito</label>
+                                            <input type="string" class="form-control" id="RGDigito" onkeypress="mascara(this,rg)" maxlength="1">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <label>Nome da mãe</label>
+                                            <input type="string" class="form-control" id="nomedamae" placeholder="Nome da mãe">
+                                        </div>
+                                    </div>
+                                
+                                
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Profissão</label>
+                                            <input type="string" class="form-control" id="profissao" placeholder="Profissão">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Parentesco</label>
+                                            <input type="string" class="form-control" id="parentesco" placeholder="Parentesco">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="shadow">
+                    <div class="over-shadow">
+                        <h1 class="titulo_caixa">Endereço</h1>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>CEP</label>
+                                        <input type="string" class="form-control" id="edCEP" placeholder="CEP">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Endereço</label>
+                                        <input type="string" class="form-control" id="endereco" placeholder="Endereço">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>Número</label>
+                                        <input type="number" class="form-control" id="endnumero" placeholder="nº">
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Complemento</label>
+                                        <input type="string" class="form-control" id="endcomplemento" placeholder="Complemento">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Bairro</label>
+                                        <input type="string" class="form-control" id="endbairro" placeholder="Bairro">
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Cidade</label>
+                                        <input type="string" class="form-control" id="endcidade" placeholder="Cidade">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>UF</label>
+                                        <select class="form-control">
+                                        <!--Adicionar estados com o controler-->
+                                            <option>SP</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            <div class="shadow">
+                <div class="over-shadow">
+                    <h1 class="titulo_caixa">Contatos</h1>
+                    <form>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Tel Residencial</label>
+                                <input type="string" class="form-control" id="telresidencial" placeholder="Tel Residencial">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Tel Celular</label>
+                                <input type="string" class="form-control" id="telcelular" placeholder="Tel Celular">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+        
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <nav>
+               <ul class="pager">
+                <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Anterior</a></li>
+                <li class="next"><a href="#">Próximo <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/cadastro_contratante.js"></script>
+</html>

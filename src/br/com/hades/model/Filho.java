@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 public class Filho {
 	@Id
 	@GeneratedValue
-	private Long id;
+	private long id;
 	
 	@NotNull
 	private String nome;

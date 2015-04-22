@@ -1,19 +1,13 @@
 package br.com.hades.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.Embeddable;
 import javax.validation.constraints.NotNull;
 
 import br.com.hades.domain.Estado;
 
-@Entity
+@Embeddable
 public class Localizacao {
 
-	@Id
-	@GeneratedValue
-	private Long id;
-	
 	@NotNull	
 	private String endereco;
 	
@@ -34,26 +28,18 @@ public class Localizacao {
 	private String bairro;
 	
 	@NotNull	
-	private int numero;
+	private int numeroEndereco;
 	
 	@NotNull	
 	private String cidade;
 	
-	private String complemento;
+	private String complementoEndereco;
 	
 	@NotNull	
 	private String cep;
 	
 	@NotNull
 	private Estado estado;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getEndereco() {
 		return endereco;
@@ -71,12 +57,12 @@ public class Localizacao {
 		this.bairro = bairro;
 	}
 
-	public int getNumero() {
-		return numero;
+	public int getNumeroEndereco() {
+		return numeroEndereco;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setNumeroEndereco(int numeroEndereco) {
+		this.numeroEndereco = numeroEndereco;
 	}
 
 	public String getCidade() {

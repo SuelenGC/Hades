@@ -1,0 +1,16 @@
+#cabecalho{
+	width: 100%;
+	padding-left: 10%;
+	padding-right: 5%;
+}
+
+#intro_caixa_botoes{
+	width:50%;
+}
+#intro_caixa_pagina{
+	position: absolute; 
+	width:100%;
+	padding-top: 15%;
+	padding-left: 35%;
+
+}

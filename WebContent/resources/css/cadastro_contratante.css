@@ -7,30 +7,8 @@
   }
 }
 
-
-#nomeRGDigito{
-  width: 10%;
-  margin-left: -2%;
-}
-
-@media (max-width: 767px) {
-  #nomeRGDigito{
-    width: 15%;
-  }
-
-  #endnumero{
-  margin-left: 0%;
-  width: 20%;
-  }
-}
-
 .navbar-fixed-top{
   z-index:99999;
-}
-
-#endnumero{
-  margin-left: -20%;
-  width: 120%;
 }
 
 #formulario-dados-pessoais{

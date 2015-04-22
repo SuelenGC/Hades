@@ -31,16 +31,21 @@ public class ContratanteDao {
 	}
 	
 	public void inserir(Contratante contratante) {
+		em.getTransaction().begin();
 		em.persist(contratante);
-		//LocalizacaoDao.
+		em.getTransaction().commit();
 	}
 	
 	public void atualizar(Contratante contratante) {
+		em.getTransaction().begin();
 		em.merge(contratante);
+		em.getTransaction().commit();
 	}
 	
 	public void remover(Contratante contratante) {
+		em.getTransaction().begin();
 		em.remove(contratante);
+		em.getTransaction().commit();
 	}
 	
 	public void close() {

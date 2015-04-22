@@ -2,12 +2,20 @@ package br.com.hades.model;
 
 import java.util.Calendar;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
-
+@Entity
 public class NascimentoObito {
+	
+	@Id
+	@GeneratedValue
+	private long id;
+	
 	@NotNull
 	private String localNascimento;
 	
@@ -29,8 +37,11 @@ public class NascimentoObito {
 	@NotNull
 	private String avoMaterna;
 	
-	@NotNull
-	private Testemunha testemunha1, testemunha2;
+	//@NotNull
+	//private Testemunha testemunha1;
+	
+	//@NotNull
+	//private Testemunha testemunha2;
 	
 	@NotNull
 	private int semanasGestacao;

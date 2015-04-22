@@ -35,16 +35,16 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label>Nome completo</label> <input type="string"
+										<label>Nome completo</label> <input value="Nome teste"
 											class="form-control" name="nomeCompleto" id="nomeCompleto"
-											placeholder="Nome Completo">
+											placeholder="Nome Completo" >
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label>Nome da mãe</label> <input type="string"
+										<label>Nome da mãe</label> <input value="Mae teste" 
 											class="form-control" name="nomeMae" id="nomeMae" placeholder="Nome da mãe">
 									</div>
 								</div>
@@ -52,13 +52,13 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>RG</label> <input type="string" class="form-control"
+										<label>RG</label> <input value="rg" class="form-control"
 											name="rg" id="rg" placeholder="RG">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>CPF</label> <input type="string" class="form-control"
+										<label>CPF</label> <input value="cpf" class="form-control"
 											name="cpf" id="cpf" placeholder="CPF" onkeypress="mascara(this,leech)">
 									</div>
 								</div>
@@ -66,13 +66,13 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Profissão</label> <input type="string"
+										<label>Profissão</label> <input value="profissao teste"
 											class="form-control" name="profissao" id="profissao" placeholder="Profissão">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Parentesco</label> <input type="string"
+										<label>Parentesco</label> <input value="patentesco teste"
 											class="form-control" name="grauParentesco" id="grauParentesco" placeholder="Parentesco">
 									</div>
 								</div>
@@ -85,7 +85,7 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label>Tel Residencial</label> <input type="string"
+										<label>Tel Residencial</label> <input value="tel res teste"
 											class="form-control" name="telResidencial" id="telResidencial"
 											placeholder="Tel Residencial">
 									</div>
@@ -94,7 +94,7 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label>Tel Celular</label> <input type="string"
+										<label>Tel Celular</label> <input value="tel cel teste"
 											class="form-control" name="telCelular" id="telCelular" placeholder="Tel Celular">
 									</div>
 								</div>
@@ -102,7 +102,7 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label>Email</label> <input type="email" class="form-control"
+										<label>Email</label> <input value="teste@teste.com" type="email" class="form-control"
 											name="email" id="email" placeholder="Email">
 									</div>
 								</div>
@@ -117,19 +117,19 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Endereço</label> <input type="string"
+										<label>Endereço</label> <input value="endereco teste"
 											class="form-control" name="endereco" id="endereco" placeholder="Endereço">
 									</div>
 								</div>
 								<div class="col-sm-2">
 									<div class="form-group">
-										<label>Número</label> <input type="number" class="form-control"
+										<label>Número</label> <input value="4534" type="number" class="form-control"
 											name="numeroEndereco" id="numeroEndereco" placeholder="Número">
 									</div>
 								</div>
 								<div class="col-sm-4">
 									<div class="form-group">
-										<label>Complemento</label> <input type="string"
+										<label>Complemento</label> <input value="complemento teste"
 											class="form-control" name="complementoEndereco" id="complementoEndereco"
 											placeholder="Complemento">
 									</div>
@@ -138,25 +138,25 @@
 							<div class="row">
 								<div class="col-sm-4">
 									<div class="form-group">
-										<label>Bairro</label> <input type="string" class="form-control"
+										<label>Bairro</label> <input value="bairro teste" class="form-control"
 											name="bairro" id="bairro" placeholder="Bairro">
 									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="form-group">
-										<label>Cidade</label> <input type="string" class="form-control"
+										<label>Cidade</label> <input value="cidade teste" class="form-control"
 											name="cidade" id="cidade" placeholder="Cidade">
 									</div>
 								</div>
 								<div class="col-sm-2">
 									<div class="form-group">
-										<label>UF</label> <input type="string" class="form-control"
+										<label>UF</label> <input value="SP" class="form-control"
 											name="estado" id="estado" placeholder="UF">
 									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="form-group">
-										<label>CEP</label> <input type="string" class="form-control"
+										<label>CEP</label> <input value="11111111" class="form-control"
 											name="cep" id="cep" placeholder="CEP">
 									</div>
 								</div>

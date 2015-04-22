@@ -11,7 +11,7 @@ import br.com.hades.domain.EstadoCivil;
 public class Testemunha {
 	@Id
 	@GeneratedValue
-	private Long id;
+	private long id;
 	
 	@NotNull
 	private String nome;

@@ -1,13 +1,20 @@
 package br.com.hades.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import br.com.hades.domain.Estado;
 
 
 @Entity
 public class CertidaoNascimento {
-	private String Cartorio;
+	
+	@Id
+	@GeneratedValue
+	private long id;
+	
+	private String cartorio;
 	
 	private String idade;
 	

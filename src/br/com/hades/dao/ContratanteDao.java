@@ -16,7 +16,7 @@ public class ContratanteDao {
 		em = factory.createEntityManager();
 	}
 
-	public boolean existeUsuario(Contratante contratante) {
+	public boolean existe(Contratante contratante) {
 		
 		if(contratante == null) {
 			throw new IllegalArgumentException("Contratante não deve ser nulo");
@@ -32,6 +32,7 @@ public class ContratanteDao {
 	
 	public void inserir(Contratante contratante) {
 		em.persist(contratante);
+		//LocalizacaoDao.
 	}
 	
 	public void atualizar(Contratante contratante) {
@@ -42,7 +43,7 @@ public class ContratanteDao {
 		em.remove(contratante);
 	}
 	
-	private void close() {
+	public void close() {
 		em.close();
 	}
 }

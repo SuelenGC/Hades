@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(uniqueConstraints=@UniqueConstraint(columnNames = {"cpf"}))
@@ -15,8 +16,9 @@ public class Contratante {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
-	@NotNull
+
+	@NotNull 
+	@Size(min=30, max=50, message="{contratante.formulario.nomecompleto.tamanho}")
 	private String nomeCompleto;
 	
 	@NotNull 

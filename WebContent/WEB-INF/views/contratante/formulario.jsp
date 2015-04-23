@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html lang="pt-br" contentType="text/html; charset=utf-8">
 <head>
@@ -28,6 +29,7 @@
     </div>
     <form action="salvar" method="post">
 		<div class="container" id="formulario-dados-pessoais">
+			<form:errors path="*" />
 			<div class="row">
 				<div class="col-md-8">
 					<div class="well" id="dadosPessoais">
@@ -35,9 +37,8 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label>Nome completo</label> <input value="Nome teste"
-											class="form-control" name="nomeCompleto" id="nomeCompleto"
-											placeholder="Nome Completo" >
+										<label>Nome completo</label>
+										<input value="Nome teste" class="form-control" name="nomeCompleto" id="nomeCompleto" placeholder="Nome Completo" >
 									</div>
 								</div>
 							</div>

@@ -1,6 +1,9 @@
 package br.com.hades.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.hades.dao.ContratanteDao;
@@ -17,9 +20,12 @@ public class ContratanteController {
 	
 
 	@RequestMapping("contratante/salvar")
-	public String salvar(Contratante contratante, Localizacao localizacao) {
-		contratante.setLocalizacao(localizacao);
+	public String salvar(@Valid Contratante contratante, BindingResult result) {
+		if (result.hasErrors()) {
+			return "contratante/formulario";
+		}
 		
+//		contratante.setLocalizacao(localizacao);
 		ContratanteDao contratantedao = new ContratanteDao();
 		contratantedao.inserir(contratante);
 		contratantedao.close();

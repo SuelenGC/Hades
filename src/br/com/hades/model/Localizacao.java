@@ -28,6 +28,8 @@ public class Localizacao {
 	@NotNull
 	private Estado estado;
 
+	public Localizacao() {}
+	
 	public Localizacao(Long id, String endereco, String bairro, int numero,
 			String cidade, String complemento, String cep, Estado estado) {
 		super();

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" contentType="text/html; charset=utf-8">
 <head>
-	<!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../../../resources/css/cadastro_contratante.css" rel="stylesheet"/>
@@ -9,9 +9,9 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container" id="cabecalho">
-			<a class="navbar-brand" href="#">Serviço</a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" id="cabecalho">
+            <a class="navbar-brand" href="#">Serviço</a>
             <p class="navbar-text navbar-right">Usuário: <a href="#" class="navbar-link">João da Silva</a></p>
         </div>
     </nav>
@@ -27,7 +27,7 @@
         </ul>
     </div>
     <div class="container" id="formulario-dados-pessoais">
-        <div class="row">
+        <div class="row col-md-12">
             <div class="col-md-12">
                 <div class="shadow">
                     <div class="over-shadow">
@@ -40,8 +40,7 @@
                                             <label>CPF</label>
                                             <input type="string" class="form-control" id="CPF" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
                                         </div>
-                                    </div>
-                                
+                                    </div>                             
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -52,27 +51,18 @@
                                     </div>                        
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-3 col-xs-10">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label>RG</label>
-                                            <input type="string" class="form-control" id="RG" placeholder="RG" onkeypress="mascara(this,rg)" maxlength="12">
+                                            <input type="string" class="form-control" id="RG" placeholder="RG">
                                         </div>
                                     </div>
-                                    <div class="col-md-1 col-xs-1" id="nomeRGDigito">
-                                        <div class="form-group">
-                                            <label>Dígito</label>
-                                            <input type="string" class="form-control" id="RGDigito" onkeypress="mascara(this,rg)" maxlength="1">
-                                        </div>
-                                    </div>
-                                    
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <label>Nome da mãe</label>
                                             <input type="string" class="form-control" id="nomedamae" placeholder="Nome da mãe">
                                         </div>
-                                    </div>
-                                
-                                
+                                    </div>                                
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -94,7 +84,7 @@
                 </div>
             </div>    
         </div>
-        <div class="row">
+        <div class="row col-md-12">
             <div class="col-md-8">
                 <div class="shadow">
                     <div class="over-shadow">
@@ -104,7 +94,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>CEP</label>
-                                        <input type="string" class="form-control" id="edCEP" placeholder="CEP">
+                                        <input type="string" class="form-control" id="edCEP" placeholder="CEP"onkeypress="mascara(this,cep)" maxlength="9">
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +136,33 @@
                                         <label>UF</label>
                                         <select class="form-control">
                                         <!--Adicionar estados com o controler-->
+                                            <option>AC</option>
+                                            <option>AL</option>
+                                            <option>AM</option>
+                                            <option>AP</option>
+                                            <option>BA</option>
+                                            <option>CE</option>
+                                            <option>DF</option>
+                                            <option>ES</option>
+                                            <option>GO</option>
+                                            <option>MA</option>
+                                            <option>MG</option>
+                                            <option>MS</option>
+                                            <option>MT</option>
+                                            <option>PA</option>
+                                            <option>PB</option>
+                                            <option>PE</option>
+                                            <option>PI</option>
+                                            <option>PR</option>
+                                            <option>RJ</option>
+                                            <option>RN</option>
+                                            <option>RO</option>
+                                            <option>RR</option>
+                                            <option>RS</option>
+                                            <option>SC</option>
+                                            <option>SE</option>
                                             <option>SP</option>
+                                            <option>TO</option>
                                         </select>
                                     </div>
                                 </div>
@@ -156,54 +172,47 @@
                 </div>
             </div>
             <div class="col-md-4">
-            <div class="shadow">
-                <div class="over-shadow">
-                    <h1 class="titulo_caixa">Contatos</h1>
-                    <form>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label>Tel Residencial</label>
-                                <input type="string" class="form-control" id="telresidencial" placeholder="Tel Residencial">
+                <div class="shadow">
+                    <div class="over-shadow">
+                        <h1 class="titulo_caixa">Contatos</h1>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Tel Residencial</label>
+                                        <input type="string" class="form-control" id="telresidencial" placeholder="Tel Residencial" onkeypress="mascara(this,telefone)" maxlength="15">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label>Tel Celular</label>
-                                <input type="string" class="form-control" id="telcelular" placeholder="Tel Celular">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Tel Celular</label>
+                                        <input type="string" class="form-control" id="telcelular" placeholder="Tel Celular" onkeypress="mascara(this,telefone)" maxlength="15">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
+        <div class="row col-md-12" id="botoes-navegacao">
+            <div class="col-xs-12">
+                <button type="button" class="col-xs-1 btn btn-default" style="visibility:hidden"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+                <button type="button" class="col-xs-offset-4 col-xs-2 btn btn-default">Cancelar</button>
+                <button type="button" class="col-xs-offset-4 col-xs-1 btn btn-default" type="submit"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+            </div>
         </div>
     </div>
-    
-        
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <nav>
-               <ul class="pager">
-                <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Anterior</a></li>
-                <li class="next"><a href="#">Próximo <span aria-hidden="true">&rarr;</span></a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
-</div>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>

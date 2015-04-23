@@ -1,6 +1,8 @@
 package br.com.hades.model;
 
 import javax.persistence.Embeddable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import br.com.hades.domain.Estado;
@@ -8,6 +10,10 @@ import br.com.hades.domain.Estado;
 @Embeddable
 public class Localizacao {
 
+	@Id
+	@GeneratedValue
+	private long id;
+	
 	@NotNull	
 	private String endereco;
 	
@@ -28,20 +34,28 @@ public class Localizacao {
 	@NotNull
 	private Estado estado;
 
-	public Localizacao() {}
-	
-	public Localizacao(Long id, String endereco, String bairro, int numero,
-			String cidade, String complemento, String cep, Estado estado) {
+	public Localizacao(long id, String endereco, String bairro,
+			int numeroEndereco, String cidade, String complementoEndereco,
+			String cep, Estado estado) {
 		super();
+		this.id = id;
 		this.endereco = endereco;
 		this.bairro = bairro;
-		this.numeroEndereco = numero;
+		this.numeroEndereco = numeroEndereco;
 		this.cidade = cidade;
-		this.complementoEndereco = complemento;
+		this.complementoEndereco = complementoEndereco;
 		this.cep = cep;
 		this.estado = estado;
 	}
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getEndereco() {
 		return endereco;
 	}
@@ -74,12 +88,12 @@ public class Localizacao {
 		this.cidade = cidade;
 	}
 
-	public String getComplemento() {
+	public String getComplementoEndereco() {
 		return complementoEndereco;
 	}
 
-	public void setComplemento(String complemento) {
-		this.complementoEndereco = complemento;
+	public void setComplementoEndereco(String complementoEndereco) {
+		this.complementoEndereco = complementoEndereco;
 	}
 
 	public String getCep() {
@@ -97,4 +111,5 @@ public class Localizacao {
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
+
 }

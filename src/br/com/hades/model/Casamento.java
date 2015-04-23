@@ -1,7 +1,7 @@
 package br.com.hades.model;
 
 import java.util.Calendar;
-import java.util.Date;
+import java.util.Calendar;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +24,7 @@ public class Casamento {
 	private String nome;
 	
 	@Temporal(TemporalType.DATE)
-	private Date dataCasamento;
+	private Calendar dataCasamento;
 	
 	private String cartorio;
 	
@@ -38,7 +38,7 @@ public class Casamento {
 	
 	private int num;
 
-	public Casamento(Long id, String nome, Date dataCasamento, String cartorio,
+	public Casamento(Long id, String nome, Calendar dataCasamento, String cartorio,
 			String cidade, Estado uf, int livro, int folha, int num) {
 		super();
 		this.id = id;
@@ -68,11 +68,11 @@ public class Casamento {
 		this.nome = nome;
 	}
 
-	public Date getDataCasamento() {
+	public Calendar getDataCasamento() {
 		return dataCasamento;
 	}
 
-	public void setDataCasamento(Date dataCasamento) {
+	public void setDataCasamento(Calendar dataCasamento) {
 		this.dataCasamento = dataCasamento;
 	}
 

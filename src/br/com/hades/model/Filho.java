@@ -4,6 +4,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import br.com.hades.domain.CategoriaIdade;
+
 
 public class Filho {
 	@Id

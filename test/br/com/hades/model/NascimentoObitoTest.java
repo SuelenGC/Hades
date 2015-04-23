@@ -138,37 +138,37 @@ public class NascimentoObitoTest {
 		assertTrue(no.getAvoMaterna() .equals("Vovo"));
 	}
 	
-	@Test
-	public void testaTestemunha1()
-	{
-		NascimentoObito no = instancia();
-		assertTrue(no.getTestemunha1().getEndereco().equals("Rua X"));
-	}
-	
-	@Test
-	public void testaSetTestemuha1()
-	{
-		NascimentoObito no = instancia();
-		Testemunha t = new Testemunha(1L, "Cicrano", EstadoCivil.Divorciado, "Sul africano", "Medico", "Rua X", "Consolacao");
-		no.setTestemunha1(t);
-		assertTrue(no.getTestemunha1().getNome() .equals("Cicrano"));
-	}	
-	
-	@Test
-	public void testaTestemunha2()
-	{
-		NascimentoObito no = instancia();
-		assertTrue(no.getTestemunha2().getEndereco().equals("Rua A"));
-	}
-	
-	@Test
-	public void testaSetTestemuha2()
-	{
-		NascimentoObito no = instancia();
-		Testemunha t = new Testemunha(1L, "Cicrano", EstadoCivil.Divorciado, "Sul africano", "Medico", "Rua X", "Consolacao");
-		no.setTestemunha2(t);
-		assertTrue(no.getTestemunha2().getNome() .equals("Cicrano"));
-	}	
+//	@Test
+//	public void testaTestemunha1()
+//	{
+//		NascimentoObito no = instancia();
+//		assertTrue(no.getTestemunha1().getEndereco().equals("Rua X"));
+//	}
+//	
+//	@Test
+//	public void testaSetTestemuha1()
+//	{
+//		NascimentoObito no = instancia();
+//		Testemunha t = new Testemunha(1L, "Cicrano", EstadoCivil.Divorciado, "Sul africano", "Medico", "Rua X", "Consolacao");
+//		no.setTestemunha1(t);
+//		assertTrue(no.getTestemunha1().getNome() .equals("Cicrano"));
+//	}	
+//	
+//	@Test
+//	public void testaTestemunha2()
+//	{
+//		NascimentoObito no = instancia();
+//		assertTrue(no.getTestemunha2().getEndereco().equals("Rua A"));
+//	}
+//	
+//	@Test
+//	public void testaSetTestemuha2()
+//	{
+//		NascimentoObito no = instancia();
+//		Testemunha t = new Testemunha(1L, "Cicrano", EstadoCivil.Divorciado, "Sul africano", "Medico", "Rua X", "Consolacao");
+//		no.setTestemunha2(t);
+//		assertTrue(no.getTestemunha2().getNome() .equals("Cicrano"));
+//	}	
 	
 	@Test
 	public void testaSemanasGestacao()

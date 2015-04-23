@@ -27,18 +27,18 @@ public class ContratanteTest {
 	}
 	
 	@Test
-	public void testaNome()
+	public void testaNomeCompleto()
 	{
 		Contratante c = instancia();
-		assertTrue(c.getNome().equals("Fulano da Silva"));
+		assertTrue(c.getNomeCompleto().equals("Fulano da Silva"));
 	}
 	
 	@Test
-	public void testaSetNome()
+	public void testaSetNomeCompleto()
 	{
 		Contratante c = instancia();
-		c.setNome("Beltrano");
-		assertTrue(c.getNome().equals("Beltrano"));
+		c.setNomeCompleto("Beltrano");
+		assertTrue(c.getNomeCompleto().equals("Beltrano"));
 	}
 
 	@Test
@@ -154,14 +154,14 @@ public class ContratanteTest {
 	}
 	
 	@Test
-	public void testaNomeMae()
+	public void testaNomeCompletoMae()
 	{
 		Contratante c = instancia();
 		assertTrue(c.getNomeMae().equals("Mae do Fulano"));
 	}
 	
 	@Test
-	public void testaSetNomeMae()
+	public void testaSetNomeCompletoMae()
 	{
 		Contratante c = instancia();
 		c.setNomeMae("Maman");
@@ -185,14 +185,14 @@ public class ContratanteTest {
 	}
 	
 	@Test
-	public void testaNomeEmpresarial()
+	public void testaNomeCompletoEmpresarial()
 	{
 		Contratante c = instancia();
 		assertTrue(c.getNomeEmpresarial().equals("Fulanos SA"));
 	}
 	
 	@Test
-	public void testaSetNomeEmpresarial()
+	public void testaSetNomeCompletoEmpresarial()
 	{
 		Contratante c = instancia();
 		c.setNomeEmpresarial("Beltrano Inc.");

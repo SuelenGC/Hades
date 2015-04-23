@@ -7,7 +7,7 @@ public class UserTest {
 
 	User instancia()
 	{		
-		return new User(1L, "erika", "banana");
+		return new User("erika", "banana");
 	}
 		
 	@Test
@@ -41,12 +41,4 @@ public class UserTest {
 		assertTrue(c.getSenha().equals("laranja"));
 		assertFalse(c.getSenha().equals("banana"));
 	}
-	
-	@Test
-	public void testaId()
-	{
-		User c = instancia();
-		assertTrue(c.getId() == 1L);
-	}
-	
 }

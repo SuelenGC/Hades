@@ -13,6 +13,25 @@ import javax.validation.constraints.Size;
 @Table(uniqueConstraints=@UniqueConstraint(columnNames = {"cpf"}))
 public class Contratante {
 
+	public Contratante(Long id, String nomeCompleto, String cpf, String rg,
+			String profissao, String grauParentesco, String telResidencial,
+			String telCelular, String email, String nomeMae,
+			Localizacao localizacao, String nomeEmpresarial, String cnpj) {
+		super();
+		this.id = id;
+		this.nomeCompleto = nomeCompleto;
+		this.cpf = cpf;
+		this.rg = rg;
+		this.profissao = profissao;
+		this.grauParentesco = grauParentesco;
+		this.telResidencial = telResidencial;
+		this.telCelular = telCelular;
+		this.email = email;
+		this.nomeMae = nomeMae;
+		this.localizacao = localizacao;
+		this.nomeEmpresarial = nomeEmpresarial;
+		this.cnpj = cnpj;
+	}
 	@Id
 	@GeneratedValue
 	private Long id;

@@ -1,8 +1,11 @@
 package br.com.hades.model;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+
 import br.com.hades.domain.Estado;
+
 import org.junit.* ;
+
 import static org.junit.Assert.* ;
 
 public class CasamentoTest {

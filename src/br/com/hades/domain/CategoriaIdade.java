@@ -1,4 +1,4 @@
-package br.com.hades.model;
+package br.com.hades.domain;
 
 public enum CategoriaIdade {
 Maior, Menor;

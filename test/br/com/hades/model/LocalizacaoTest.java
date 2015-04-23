@@ -63,30 +63,30 @@ public class LocalizacaoTest {
 	public void testaGetNumero()
 	{
 		Localizacao loc = instancia();
-		assertTrue(loc.getNumero()==666);
+		assertTrue(loc.getNumeroEndereco()==666);
 	}
 	
 	@Test
 	public void testaSetNumero()
 	{
 		Localizacao loc = instancia();
-		loc.setNumero(loc.getNumero()+1);
-		assertTrue(loc.getNumero()==667);
+		loc.setNumeroEndereco(loc.getNumeroEndereco()+1);
+		assertTrue(loc.getNumeroEndereco()==667);
 	}
 	
 	@Test
 	public void testaGetComplemento()
 	{
 		Localizacao loc = instancia();
-		assertTrue(loc.getComplemento().equals(""));
+		assertTrue(loc.getComplementoEndereco().equals(""));
 	}
 	
 	@Test
 	public void testaSetComplemento()
 	{
 		Localizacao loc = instancia();
-		loc.setComplemento("Comp");
-		assertTrue(loc.getComplemento().equals("Comp"));
+		loc.setComplementoEndereco("Comp");
+		assertTrue(loc.getComplementoEndereco().equals("Comp"));
 	}
 	
 	@Test

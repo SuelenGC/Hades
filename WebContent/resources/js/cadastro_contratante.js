@@ -12,16 +12,16 @@ function execmascara(){
     v=v.replace(/(\d{3})(\d)/,"$1.$2")       
     v=v.replace(/(\d{3})(\d)/,"$1.$2")                                            
     v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
-    //v=v.replace(/(\d{3}\.){3}-(\d{1,2})(.*)$/,"$1$2")
     return v
 }
-function rg(v){
-    v=v.replace(/[^0-9X]/g,"")                   
+function cep(v){
+    v=v.replace(/\D/g,"")       
+    v=v.replace(/(\d{5})(\d{1,3})$/,"$1-$2")
     return v
 }
-function email(){
-    //nome@ahaha.aas
-    //nome@aahah.asa.as
-    //alguma coisa @ alguma coisa, uma ou mais repeticoes de (. alguma coisa)
-    //.+[@].+[[\.].]+
+function telefone(v){
+    v=v.replace(/\D/g,"")                   
+    v=v.replace(/(\d{2})(\d)/,"($1) $2")       
+    v=v.replace(/(\d{4,5})(\d{4})/,"$1-$2")                                            
+    return v
 }

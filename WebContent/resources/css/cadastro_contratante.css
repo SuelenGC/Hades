@@ -10,7 +10,9 @@
 .navbar-fixed-top{
   z-index:99999;
 }
-
+#botoes-navegacao{
+  margin-top: 1%;
+}
 #formulario-dados-pessoais{
   margin-top: 7%;
 }

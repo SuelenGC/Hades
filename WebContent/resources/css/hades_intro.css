@@ -6,11 +6,18 @@
 
 #intro_caixa_botoes{
 	width:50%;
+	margin-left: 25%;
 }
+
 #intro_caixa_pagina{
+	text-align: center;
 	position: absolute; 
 	width:100%;
-	padding-top: 15%;
-	padding-left: 35%;
-
+	
 }
+
+#caixa_coluna{
+	margin-top: 10%;
+    margin-left: 25%;
+}
+

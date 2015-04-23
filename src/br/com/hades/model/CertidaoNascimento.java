@@ -31,7 +31,7 @@ public class CertidaoNascimento {
 	public CertidaoNascimento(String cartorio, String idade, Estado estado,
 			int livro, int folha, int numCertidao, boolean nascObito) {
 		super();
-		Cartorio = cartorio;
+		this.cartorio = cartorio;
 		this.idade = idade;
 		this.estado = estado;
 		this.livro = livro;
@@ -41,11 +41,11 @@ public class CertidaoNascimento {
 	}
 
 	public String getCartorio() {
-		return Cartorio;
+		return cartorio;
 	}
 
 	public void setCartorio(String cartorio) {
-		Cartorio = cartorio;
+		this.cartorio = cartorio;
 	}
 
 	public String getIdade() {

@@ -11,19 +11,6 @@ public class Localizacao {
 	@NotNull	
 	private String endereco;
 	
-	public Localizacao(Long id, String endereco, String bairro, int numero,
-			String cidade, String complemento, String cep, Estado estado) {
-		super();
-		this.id = id;
-		this.endereco = endereco;
-		this.bairro = bairro;
-		this.numero = numero;
-		this.cidade = cidade;
-		this.complemento = complemento;
-		this.cep = cep;
-		this.estado = estado;
-	}
-
 	@NotNull	
 	private String bairro;
 	
@@ -41,6 +28,18 @@ public class Localizacao {
 	@NotNull
 	private Estado estado;
 
+	public Localizacao(Long id, String endereco, String bairro, int numero,
+			String cidade, String complemento, String cep, Estado estado) {
+		super();
+		this.endereco = endereco;
+		this.bairro = bairro;
+		this.numeroEndereco = numero;
+		this.cidade = cidade;
+		this.complementoEndereco = complemento;
+		this.cep = cep;
+		this.estado = estado;
+	}
+	
 	public String getEndereco() {
 		return endereco;
 	}
@@ -74,11 +73,11 @@ public class Localizacao {
 	}
 
 	public String getComplemento() {
-		return complemento;
+		return complementoEndereco;
 	}
 
 	public void setComplemento(String complemento) {
-		this.complemento = complemento;
+		this.complementoEndereco = complemento;
 	}
 
 	public String getCep() {

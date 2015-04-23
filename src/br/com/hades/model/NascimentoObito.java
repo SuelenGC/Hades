@@ -62,8 +62,8 @@ public class NascimentoObito {
 		this.avoMaterno = avoMaterno;
 		this.avoPaterna = avoPaterna;
 		this.avoMaterna = avoMaterna;
-		this.testemunha1 = testemunha1;
-		this.testemunha2 = testemunha2;
+//		this.testemunha1 = testemunha1;
+//		this.testemunha2 = testemunha2;
 		this.semanasGestacao = semanasGestacao;
 		this.gravidez = gravidez;
 	}
@@ -124,21 +124,21 @@ public class NascimentoObito {
 		this.avoMaterna = avoMaterna;
 	}
 
-	public Testemunha getTestemunha1() {
-		return testemunha1;
-	}
-
-	public void setTestemunha1(Testemunha testemunha1) {
-		this.testemunha1 = testemunha1;
-	}
-
-	public Testemunha getTestemunha2() {
-		return testemunha2;
-	}
-
-	public void setTestemunha2(Testemunha testemunha2) {
-		this.testemunha2 = testemunha2;
-	}
+//	public Testemunha getTestemunha1() {
+//		return testemunha1;
+//	}
+//
+//	public void setTestemunha1(Testemunha testemunha1) {
+//		this.testemunha1 = testemunha1;
+//	}
+//
+//	public Testemunha getTestemunha2() {
+//		return testemunha2;
+//	}
+//
+//	public void setTestemunha2(Testemunha testemunha2) {
+//		this.testemunha2 = testemunha2;
+//	}
 
 	public int getSemanasGestacao() {
 		return semanasGestacao;

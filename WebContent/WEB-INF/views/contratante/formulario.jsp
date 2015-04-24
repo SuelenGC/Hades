@@ -1,23 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
 <!DOCTYPE html>
 <html lang="pt-br" contentType="text/html; charset=utf-8">
 <head>
-	<!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../../../resources/css/cadastro_contratante.css" rel="stylesheet"/>
+    <link href="../../../resources/css/form_style.css" rel="stylesheet"/>
 
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container" id="cabecalho">
-			<a class="navbar-brand" href="#">Serviço</a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" id="cabecalho">
+            <a class="navbar-brand" href="#">Serviço</a>
             <p class="navbar-text navbar-right">Usuário: <a href="#" class="navbar-link">João da Silva</a></p>
         </div>
     </nav>
     <div class="caixa_barra_progresso" id="barra_de_progresso">
-       <ul class="barra_progresso">
+       <ul class="barra_progresso"> 
             <li class="visited first">
                 <a href="#">Entrar</a>
             </li>
@@ -27,160 +29,195 @@
             <li class="">Complete</li>
         </ul>
     </div>
-    <form action="salvar" method="post">
-		<div class="container" id="formulario-dados-pessoais">
-			<form:errors path="*" />
-			<div class="row">
-				<div class="col-md-8">
-					<div class="well" id="dadosPessoais">
-						<h1 class="titulo_caixa">Dados pessoais</h1>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Nome completo</label>
-										<input value="Nome teste" class="form-control" name="nomeCompleto" id="nomeCompleto" placeholder="Nome Completo" >
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Nome da mãe</label> <input value="Mae teste" 
-											class="form-control" name="nomeMae" id="nomeMae" placeholder="Nome da mãe">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>RG</label> <input value="rg" class="form-control"
-											name="rg" id="rg" placeholder="RG">
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>CPF</label> <input value="cpf" class="form-control"
-											name="cpf" id="cpf" placeholder="CPF" onkeypress="mascara(this,leech)">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Profissão</label> <input value="profissao teste"
-											class="form-control" name="profissao" id="profissao" placeholder="Profissão">
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Parentesco</label> <input value="patentesco teste"
-											class="form-control" name="grauParentesco" id="grauParentesco" placeholder="Parentesco">
-									</div>
-								</div>
-							</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="well" id="caixaContatos">
-						<h1 class="titulo_caixa">Contatos</h1>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Tel Residencial</label> <input value="tel res teste"
-											class="form-control" name="telResidencial" id="telResidencial"
-											placeholder="Tel Residencial">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Tel Celular</label> <input value="tel cel teste"
-											class="form-control" name="telCelular" id="telCelular" placeholder="Tel Celular">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Email</label> <input value="teste@teste.com" type="email" class="form-control"
-											name="email" id="email" placeholder="Email">
-									</div>
-								</div>
-							</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="well">
-						<h1 class="titulo_caixa">Endereço</h1>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Endereço</label> <input value="endereco teste"
-											class="form-control" name="endereco" id="endereco" placeholder="Endereço">
-									</div>
-								</div>
-								<div class="col-sm-2">
-									<div class="form-group">
-										<label>Número</label> <input value="4534" type="number" class="form-control"
-											name="numeroEndereco" id="numeroEndereco" placeholder="Número">
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="form-group">
-										<label>Complemento</label> <input value="complemento teste"
-											class="form-control" name="complementoEndereco" id="complementoEndereco"
-											placeholder="Complemento">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="form-group">
-										<label>Bairro</label> <input value="bairro teste" class="form-control"
-											name="bairro" id="bairro" placeholder="Bairro">
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label>Cidade</label> <input value="cidade teste" class="form-control"
-											name="cidade" id="cidade" placeholder="Cidade">
-									</div>
-								</div>
-								<div class="col-sm-2">
-									<div class="form-group">
-										<label>UF</label> <input value="SP" class="form-control"
-											name="estado" id="estado" placeholder="UF">
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label>CEP</label> <input value="11111111" class="form-control"
-											name="cep" id="cep" placeholder="CEP">
-									</div>
-								</div>
-							</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<nav>
-						<ul class="pager">
-							<li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Anterior</a></li>
-							<li class="next"><input type="submit">Próximo <spanaria-hidden="true">&rarr;</span></input></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</form>
+    <div class="container" id="formulario-dados-pessoais">
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="shadow">
+                    <div class="over-shadow">
+                        <div id="dadosPessoais">
+                            <h1 class="titulo_caixa">Dados pessoais</h1>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label>CPF</label>
+                                            <input  class="form-control" name="cpf" id="cpf" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
+                                        </div>
+                                    </div>                             
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label>Nome completo</label>
+                                            <input  class="form-control" name="nomeCompleto" id="nomeCompleto" placeholder="Nome Completo">
+                                        </div>
+                                    </div>                        
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>RG</label>
+                                            <input  class="form-control" name="rg" id="rg" placeholder="RG">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <label>Nome da mãe</label>
+                                            <input  class="form-control" name="nomeMae" id="nomeMae"  placeholder="Nome da mãe">
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Profissão</label>
+                                            <input  class="form-control" name="profissao" id="profissao" placeholder="Profissão">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Parentesco</label>
+                                            <input  class="form-control" name="grauParentesco" id="grauParentesco"  placeholder="Parentesco">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-8">
+                <div class="shadow">
+                    <div class="over-shadow">
+                        <h1 class="titulo_caixa">Endereço</h1>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>CEP</label>
+                                        <input  class="form-control" name="cep" id="cep"  placeholder="CEP"onkeypress="mascara(this,cep)" maxlength="9">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Endereço</label>
+                                        <input  class="form-control" name="endereco" id="endereco" placeholder="Endereço">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>Número</label>
+                                        <input type="number" class="form-control" name="numeroEndereco" id="numeroEndereco" placeholder="nº">
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Complemento</label>
+                                        <input  class="form-control" name="complementoEndereco" id="complementoEndereco" placeholder="Complemento">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Bairro</label>
+                                        <input  class="form-control" name="bairro" id="bairro" placeholder="Bairro">
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Cidade</label>
+                                        <input  class="form-control" name="cidade" id="cidade" placeholder="Cidade">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label>UF</label>
+                                        <select name="estado" id="estado" class="form-control">
+                                        <!--Adicionar estados com o controler-->
+                                            <option>AC</option>
+                                            <option>AL</option>
+                                            <option>AM</option>
+                                            <option>AP</option>
+                                            <option>BA</option>
+                                            <option>CE</option>
+                                            <option>DF</option>
+                                            <option>ES</option>
+                                            <option>GO</option>
+                                            <option>MA</option>
+                                            <option>MG</option>
+                                            <option>MS</option>
+                                            <option>MT</option>
+                                            <option>PA</option>
+                                            <option>PB</option>
+                                            <option>PE</option>
+                                            <option>PI</option>
+                                            <option>PR</option>
+                                            <option>RJ</option>
+                                            <option>RN</option>
+                                            <option>RO</option>
+                                            <option>RR</option>
+                                            <option>RS</option>
+                                            <option>SC</option>
+                                            <option>SE</option>
+                                            <option>SP</option>
+                                            <option>TO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="shadow">
+                    <div class="over-shadow">
+                        <h1 class="titulo_caixa">Contatos</h1>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Tel Residencial</label>
+                                        <input  class="form-control" name="telResidencial" id="telResidencial" placeholder="Tel Residencial" onkeypress="mascara(this,telefone)" maxlength="15">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Tel Celular</label>
+                                        <input  class="form-control" name="telCelular" id="telCelular"  placeholder="Tel Celular" onkeypress="mascara(this,telefone)" maxlength="15">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12" id="botoes-navegacao">
+            <div class="col-xs-12">
+                <button type="button" class="col-xs-1 btn btn-default" style="visibility:hidden"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+                <button type="button" class="col-xs-offset-4 col-xs-2 btn btn-default">Cancelar</button>
+                <button type="button" class="col-xs-offset-4 col-xs-1 btn btn-default" type="submit"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
-<script>
- $('#CPF').mask("999.999.999-99");
-</script>
+<script type="text/javascript" src="../../../resources/js/cadastro_contratante.js"></script>
 </html>

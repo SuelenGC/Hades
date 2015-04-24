@@ -4,7 +4,9 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import br.com.hades.dao.ContratanteDao;
 import br.com.hades.model.Contratante;
@@ -28,8 +30,17 @@ public class ContratanteController {
 //		contratante.setLocalizacao(localizacao);
 		ContratanteDao contratantedao = new ContratanteDao();
 		contratantedao.inserir(contratante);
+		
 		contratantedao.close();
 		
 		return "contratante/ok";
+	}
+	
+	@RequestMapping("contratante/busca/cpf/{cpf}")
+	public String buscaPorCpf(@PathVariable String cpf) {
+		ContratanteDao contratantedao = new ContratanteDao();
+		Contratante contratante = contratantedao.buscaPorCpf(cpf);
+		
+		return "";
 	}
 }

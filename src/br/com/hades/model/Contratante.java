@@ -4,10 +4,13 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import br.com.hades.domain.CategoriaIdade;
 
 @Entity
 @Table(uniqueConstraints=@UniqueConstraint(columnNames = {"cpf"}))
@@ -31,7 +34,7 @@ public class Contratante {
 		this.telCelular = telCelular;
 		this.email = email;
 		this.nomeMae = nomeMae;
-		//this.localizacao = localizacao;
+		this.localizacao = localizacao;
 		this.nomeEmpresarial = nomeEmpresarial;
 		this.cnpj = cnpj;
 	}
@@ -63,9 +66,10 @@ public class Contratante {
 	@NotNull	
 	private String nomeMae;
 	
-//	@NotNull
-//	@Embedded
-//	private Localizacao localizacao;
+	//@NotNull
+	//@Embedded
+	@OneToOne
+	private Localizacao localizacao;
 
 	private String nomeEmpresarial;
 	private String cnpj;
@@ -131,13 +135,13 @@ public class Contratante {
 		this.nomeMae = nomeMae;
 	}
 	
-//	@Embedded
-//	public Localizacao getLocalizacao() {
-//		return localizacao;
-//	}
-//	public void setLocalizacao(Localizacao localizacao) {
-//		this.localizacao = localizacao;
-//	}
+	//@Embedded
+	public Localizacao getLocalizacao() {
+		return localizacao;
+	}
+	public void setLocalizacao(Localizacao localizacao) {
+		this.localizacao = localizacao;
+	}
 	public String getNomeEmpresarial() {
 		return nomeEmpresarial;
 	}

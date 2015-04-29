@@ -1,13 +1,14 @@
 package br.com.hades.model;
 
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import br.com.hades.domain.Estado;
 
-@Embeddable
+@Entity
 public class Localizacao {
 
 	@Id

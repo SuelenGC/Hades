@@ -50,16 +50,16 @@ ul.barra_progresso li.active {
 }
 ul.barra_progresso li.active:before {
   background: #7A0000;
-  z-index: 99999;
+  z-index: 9999;
 }
 ul.barra_progresso li.visited {
   background: #ECECEC;
   color: #242B2F;
-  z-index: 99999;
+  z-index: 99;
 }
 ul.barra_progresso li.visited:before {
   background: #242B2F;
-  z-index: 99999;
+  z-index: 999;
 }
 ul.barra_progresso li:nth-child(1):before {
   content: "1";
@@ -141,7 +141,7 @@ ul.barra_progresso a {
     margin: 50px 0 0;
     padding: 0;
     text-align: center;
-    width: 19%;
+    width: 16.2%;
   }
   ul.barra_progresso li:before {
     height: 45px;
@@ -150,7 +150,7 @@ ul.barra_progresso a {
     position: absolute;
     top: -65px;
     width: 45px;
-    z-index: 99;
+    z-index: 200;
   }
   ul.barra_progresso li.visited {
     background: none;
@@ -168,7 +168,7 @@ ul.barra_progresso a {
     position: absolute;
     top: -50px;
     width: 100%;
-    z-index: 99;
+    z-index: 200;
   }
 
   ul.barra_progresso li.previous:after {
@@ -184,6 +184,6 @@ ul.barra_progresso a {
     position: absolute;
     top: -50px;
     width: 100%;
-    z-index: 99;
+    z-index: 200;
   }
 }

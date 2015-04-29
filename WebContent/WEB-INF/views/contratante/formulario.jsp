@@ -7,11 +7,12 @@
     <!-- Bootstrap Core CSS -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../../../resources/css/cadastro_contratante.css" rel="stylesheet"/>
-    <link href="../../../resources/css/form_style.css" rel="stylesheet"/>
+    <link href="../resources/css/cadastro_contratante.css" rel="stylesheet"/>
+    <link href="../resources/css/form_style.css" rel="stylesheet"/>
 
 </head>
 <body>
+	<form action="salvar" method="POST">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container" id="cabecalho">
             <a class="navbar-brand" href="#">Serviço</a>
@@ -36,12 +37,11 @@
                     <div class="over-shadow">
                         <div id="dadosPessoais">
                             <h1 class="titulo_caixa">Dados pessoais</h1>
-                            <form>
                                 <div class="row">
                                     <div class="col-md-6 col-xs-12">
                                         <div class="form-group">
                                             <label>CPF</label>
-                                            <input  class="form-control" name="cpf" id="cpf" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
+                                            <input  class="form-control" name="cpf" id="cpf" onblur="buscaPorCpf()" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
                                         </div>
                                     </div>                             
                                 </div>
@@ -81,7 +81,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -92,7 +91,6 @@
                 <div class="shadow">
                     <div class="over-shadow">
                         <h1 class="titulo_caixa">Endereço</h1>
-                        <form>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
@@ -170,7 +168,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -178,7 +175,6 @@
                 <div class="shadow">
                     <div class="over-shadow">
                         <h1 class="titulo_caixa">Contatos</h1>
-                        <form>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
@@ -203,7 +199,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -212,12 +207,13 @@
             <div class="col-xs-12">
                 <button type="button" class="col-xs-1 btn btn-default" style="visibility:hidden"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
                 <button type="button" class="col-xs-offset-4 col-xs-2 btn btn-default">Cancelar</button>
-                <button type="button" class="col-xs-offset-4 col-xs-1 btn btn-default" type="submit"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                <input type="submit" class="col-xs-offset-4 col-xs-1 btn btn-default"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
             </div>
         </div>
     </div>
+    </form>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
-<script type="text/javascript" src="../../../resources/js/cadastro_contratante.js"></script>
+<script type="text/javascript" src="../resources/js/cadastro_contratante.js"></script>
 </html>

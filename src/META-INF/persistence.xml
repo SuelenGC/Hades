@@ -10,8 +10,8 @@
 		<!-- Implementacao do JPA2, no nosso caso Hibernate -->
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-		<class>br.com.hades.model.User</class>
-		<class>br.com.hades.model.Cliente</class>
+		<class>br.com.hades.model.Contratante</class>
+		<class>br.com.hades.model.Localizacao</class>
 
 		<properties>
 			<!-- Propriedades JDBC -->

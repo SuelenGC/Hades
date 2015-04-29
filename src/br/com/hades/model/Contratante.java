@@ -13,6 +13,9 @@ import javax.validation.constraints.Size;
 @Table(uniqueConstraints=@UniqueConstraint(columnNames = {"cpf"}))
 public class Contratante {
 
+	public Contratante() {
+	}
+	
 	public Contratante(Long id, String nomeCompleto, String cpf, String rg,
 			String profissao, String grauParentesco, String telResidencial,
 			String telCelular, String email, String nomeMae,
@@ -28,16 +31,17 @@ public class Contratante {
 		this.telCelular = telCelular;
 		this.email = email;
 		this.nomeMae = nomeMae;
-		this.localizacao = localizacao;
+		//this.localizacao = localizacao;
 		this.nomeEmpresarial = nomeEmpresarial;
 		this.cnpj = cnpj;
 	}
+	
 	@Id
 	@GeneratedValue
 	private Long id;
 
 	@NotNull 
-	@Size(min=30, max=50, message="{contratante.formulario.nomecompleto.tamanho}")
+	@Size(min=5, max=50, message="{contratante.formulario.nomecompleto.tamanho}")
 	private String nomeCompleto;
 	
 	@NotNull 
@@ -59,9 +63,9 @@ public class Contratante {
 	@NotNull	
 	private String nomeMae;
 	
-	@NotNull
-	@Embedded
-	private Localizacao localizacao;
+//	@NotNull
+//	@Embedded
+//	private Localizacao localizacao;
 
 	private String nomeEmpresarial;
 	private String cnpj;
@@ -126,12 +130,14 @@ public class Contratante {
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
 	}
-	public Localizacao getLocalizacao() {
-		return localizacao;
-	}
-	public void setLocalizacao(Localizacao localizacao) {
-		this.localizacao = localizacao;
-	}
+	
+//	@Embedded
+//	public Localizacao getLocalizacao() {
+//		return localizacao;
+//	}
+//	public void setLocalizacao(Localizacao localizacao) {
+//		this.localizacao = localizacao;
+//	}
 	public String getNomeEmpresarial() {
 		return nomeEmpresarial;
 	}

@@ -55,10 +55,16 @@ public class ContratanteDao {
 		em.close();
 	}
 
+	@SuppressWarnings("unchecked")
 	public Contratante buscaPorCpf(String cpf) {
-		List<Contratante> contratantes = em.createQuery("select * from contratante c where cpf = :cpf")
-				.setParameter("cpf", cpf).getResultList();
-		return contratantes.get(0);
+		List<Contratante> contratantes = em.createQuery("from Contratante c where c.cpf = :cpf")
+										   .setParameter("cpf", cpf)
+										   .getResultList();
+		
+		if (contratantes.size() > 0) {
+			return contratantes.get(0);
+		}
+		return null;
 	}
 
 }

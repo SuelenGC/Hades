@@ -25,11 +25,3 @@ function telefone(v){
     v=v.replace(/(\d{4,5})(\d{4})/,"$1-$2")                                            
     return v
 }
-
-
-function buscaPorCpf() {
-	var cpf = $("#cpf").val();
-	alert(cpf);
-	
-	$post("http://localhost:8080/HadesWeb/contratante/busca");
-}

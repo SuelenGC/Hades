@@ -7,7 +7,7 @@
     <!-- Bootstrap Core CSS -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../resources/css/cadastro_contratante.css" rel="stylesheet"/>
+    <link href="../resources/css/contratante.css" rel="stylesheet"/>
     <link href="../resources/css/form_style.css" rel="stylesheet"/>
 
 </head>
@@ -41,7 +41,7 @@
                                     <div class="col-md-6 col-xs-12">
                                         <div class="form-group">
                                             <label>CPF</label>
-                                            <input  class="form-control" name="cpf" id="cpf" onblur="buscaPorCpf()" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
+                                            <input  class="form-control" name="cpf" id="cpf" onblur="buscaPorCpf()" value="${contratante.cpf}" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
                                         </div>
                                     </div>                             
                                 </div>
@@ -95,7 +95,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>CEP</label>
-                                        <input  class="form-control" name="cep" id="cep"  placeholder="CEP"onkeypress="mascara(this,cep)" maxlength="9">
+                                        <input  class="form-control" name="cep" id="cep"  placeholder="CEP" onkeypress="mascara(this,cep)" maxlength="9">
                                     </div>
                                 </div>
                             </div>
@@ -215,5 +215,5 @@
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
-<script type="text/javascript" src="../resources/js/cadastro_contratante.js"></script>
+<script type="text/javascript" src="../resources/js/contratante.js"></script>
 </html>

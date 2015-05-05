@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.hades.dao.ContratanteDao;
+import br.com.hades.dao.LocalizacaoDao;
 import br.com.hades.domain.Estado;
 import br.com.hades.model.Contratante;
 import br.com.hades.model.Localizacao;
@@ -25,15 +26,17 @@ public class ContratanteController {
 	
 
 	@RequestMapping("contratante/salvar")
-	public String salvar(@Valid Contratante contratante, BindingResult result) {
+	public String salvar(@Valid Contratante contratante, @Valid Localizacao localizacao, BindingResult result) {
 		if (result.hasErrors()) {
 			return "contratante/formulario";
 		}
 		
-//		contratante.setLocalizacao(localizacao);
+		contratante.setLocalizacao(localizacao);
 		ContratanteDao contratantedao = new ContratanteDao();
+		LocalizacaoDao localizacaodao = new LocalizacaoDao();
+		localizacaodao.inserir(localizacao);
 		contratantedao.inserir(contratante);
-		
+		localizacaodao.close();
 		contratantedao.close();
 		
 		return "contratante/ok";

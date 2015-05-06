@@ -203,9 +203,9 @@
             </div>
 			<div class="row col-md-12" id="botoes-navegacao">
                 <div class="col-xs-12">
-                    <input type="button" class="col-xs-1 btn btn-default" style="visibility:hidden"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></input>
-                    <input type="button" class="col-xs-offset-4 col-xs-2 btn btn-default">Cancelar</input>
-                    <input class="col-xs-offset-4 col-xs-1 btn btn-default" value="Próximo" type="submit"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></input>
+                    <input type="button" class="col-xs-1 btn btn-default" style="visibility:hidden" value=">"></input>
+                    <input type="button" class="col-xs-offset-4 col-xs-2 btn btn-default" value="Cancelar"></input>
+                    <input class="col-xs-offset-4 col-xs-1 btn btn-default" value="<" type="submit"></input>
                 </div>
             </div>
 		</div>

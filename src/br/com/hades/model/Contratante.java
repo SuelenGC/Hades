@@ -1,9 +1,10 @@
 package br.com.hades.model;
 
-import javax.persistence.Embedded;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
@@ -13,6 +14,9 @@ import javax.validation.constraints.Size;
 @Table(uniqueConstraints=@UniqueConstraint(columnNames = {"cpf"}))
 public class Contratante {
 
+	public Contratante() {
+	}
+	
 	public Contratante(Long id, String nomeCompleto, String cpf, String rg,
 			String profissao, String grauParentesco, String telResidencial,
 			String telCelular, String email, String nomeMae,
@@ -32,15 +36,16 @@ public class Contratante {
 		this.nomeEmpresarial = nomeEmpresarial;
 		this.cnpj = cnpj;
 	}
+	
 	@Id
 	@GeneratedValue
 	private Long id;
 
 	@NotNull 
-	@Size(min=30, max=50, message="{contratante.formulario.nomecompleto.tamanho}")
+	@Size(min=3, max=50, message="{contratante.formulario.nomecompleto.tamanho}")
 	private String nomeCompleto;
 	
-	@NotNull 
+	@NotNull(message="{validacao.cpf.not.null}") 
 	private String cpf;
 	
 	@NotNull 
@@ -57,10 +62,10 @@ public class Contratante {
 	private String email;
 	
 	@NotNull	
+	@Size(min=3, max=50, message="{contratante.formulario.nomemae.tamanho}")
 	private String nomeMae;
 	
-	@NotNull
-	@Embedded
+	@OneToOne(cascade=CascadeType.PERSIST)
 	private Localizacao localizacao;
 
 	private String nomeEmpresarial;
@@ -126,6 +131,8 @@ public class Contratante {
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
 	}
+	
+	//@Embedded
 	public Localizacao getLocalizacao() {
 		return localizacao;
 	}
@@ -143,5 +150,10 @@ public class Contratante {
 	}
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
+	}
+	
+	public static Contratante getFake() {
+		Localizacao localizacao = Localizacao.getFake();
+		return new Contratante(1L, "Suelen Goularte Carvalho", "342.111.848.37", "40536681-5", "Mobile Leader", "Filha", "(11) 8888-8888", "(11) 95020-0060", "suelengcarvalho@gmail.com", "Sonia Goularte", localizacao, "sem nome", "");
 	}
 }

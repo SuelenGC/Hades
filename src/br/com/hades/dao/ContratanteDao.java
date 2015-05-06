@@ -1,5 +1,7 @@
 package br.com.hades.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -52,4 +54,17 @@ public class ContratanteDao {
 	public void close() {
 		em.close();
 	}
+
+	@SuppressWarnings("unchecked")
+	public Contratante buscaPorCpf(String cpf) {
+		List<Contratante> contratantes = em.createQuery("from Contratante c where c.cpf = :cpf")
+										   .setParameter("cpf", cpf)
+										   .getResultList();
+		
+		if (contratantes.size() > 0) {
+			return contratantes.get(0);
+		}
+		return null;
+	}
+
 }

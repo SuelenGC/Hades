@@ -1,13 +1,13 @@
 package br.com.hades.model;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import br.com.hades.domain.Estado;
 
-@Embeddable
+@Entity
 public class Localizacao {
 
 	@Id
@@ -34,6 +34,8 @@ public class Localizacao {
 	@NotNull
 	private Estado estado;
 
+	public Localizacao() {	}
+	
 	public Localizacao(long id, String endereco, String bairro,
 			int numeroEndereco, String cidade, String complementoEndereco,
 			String cep, Estado estado) {
@@ -110,6 +112,10 @@ public class Localizacao {
 
 	public void setEstado(Estado estado) {
 		this.estado = estado;
+	}
+
+	public static Localizacao getFake() {
+		return new Localizacao(1L, "Av. dos Ourives", "Jd. Sao Saverio", 433, "São Paulo", "ap 12 bl 1", "04194-260", Estado.SP);
 	}
 
 }

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="pt-br">
 <head>
     <!-- Bootstrap Core CSS -->
@@ -40,7 +40,7 @@
                                     <div class="col-md-6 col-xs-12">
                                         <div class="form-group">
                                             <label>CPF</label>
-                                            <input type="text" class="form-control" id="cpf" name="cpf" onblur="buscaPorCpf()" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
+                                            <input type="text" class="form-control" id="cpf" name="cpf" onblur="buscaPorCpf()" placeholder="CPF" onkeypress="mascara(this,cpf_mask)" maxlength="14">
                                         </div>
                                     </div>                             
                                 </div>
@@ -94,7 +94,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>CEP</label>
-                                        <input type="text" class="form-control" name="cep" id="cep" placeholder="CEP" onkeypress="mascara(this,cep)" maxlength="9">
+                                        <input type="text" class="form-control" name="cep" id="cep" placeholder="CEP" onkeypress="mascara(this,cep_mask)" maxlength="9">
                                     </div>
                                 </div>
                             </div>
@@ -214,5 +214,5 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="../resources/js/contratante.js"></script>
-
+<script type="text/javascript" src="../resources/js/Util.js"></script>
 </html>

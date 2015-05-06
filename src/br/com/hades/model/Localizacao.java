@@ -1,6 +1,5 @@
 package br.com.hades.model;
 
-import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -35,8 +34,7 @@ public class Localizacao {
 	@NotNull
 	private Estado estado;
 
-	public Localizacao() {
-	}
+	public Localizacao() {	}
 	
 	public Localizacao(long id, String endereco, String bairro,
 			int numeroEndereco, String cidade, String complementoEndereco,

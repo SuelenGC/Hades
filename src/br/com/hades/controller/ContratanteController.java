@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.hades.dao.ContratanteDao;
+import br.com.hades.dao.LocalizacaoDao;
 import br.com.hades.model.Contratante;
 import br.com.hades.model.Localizacao;
 
@@ -30,8 +31,10 @@ public class ContratanteController {
 		
 		contratante.setLocalizacao(localizacao);
 		ContratanteDao contratantedao = new ContratanteDao();
+		LocalizacaoDao localizacaodao = new LocalizacaoDao();
+		localizacaodao.inserir(localizacao);
 		contratantedao.inserir(contratante);
-		
+		localizacaodao.close();
 		contratantedao.close();
 		
 		return "redirect:/falecido/formulario";

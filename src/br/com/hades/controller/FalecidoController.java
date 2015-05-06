@@ -32,6 +32,6 @@ public class FalecidoController {
 		falecidodao.inserir(falecido);
 		falecidodao.close();
 		
-		return "redirect:falecido/dadosObito";
+		return "redirect:dadosobito/formulario";
 	}
 }

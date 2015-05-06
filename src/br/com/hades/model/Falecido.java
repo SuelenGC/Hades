@@ -2,6 +2,7 @@ package br.com.hades.model;
 
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -48,8 +49,8 @@ public class Falecido {
 	
 	private EstadoCivil estadoCivil;
 	
-	@NotNull
-	@OneToOne
+	
+	@OneToOne(cascade = CascadeType.PERSIST)
 	private Localizacao localizacao;
 	
 	@NotNull

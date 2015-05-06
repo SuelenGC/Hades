@@ -4,6 +4,7 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.hades.dao.FalecidoDao;
@@ -21,19 +22,16 @@ public class FalecidoController {
 	
 
 	@RequestMapping("falecido/salvar")
-	public String salvar(@Valid Falecido falecido, @Valid Localizacao localizacao, BindingResult result) {
+	public String salvar(@Valid Falecido falecido, BindingResult result, @ModelAttribute Localizacao localizacao) {
 		if (result.hasErrors()) {
 			return "falecido/formulario";
 		}
 		
 		falecido.setLocalizacao(localizacao);
 		FalecidoDao falecidodao = new FalecidoDao();
-		LocalizacaoDao localizacaodao = new LocalizacaoDao();
-		localizacaodao.inserir(localizacao);
 		falecidodao.inserir(falecido);
-		localizacaodao.close();
 		falecidodao.close();
 		
-		return "falecido/ok";
+		return "redirect:falecido/dadosObito";
 	}
 }

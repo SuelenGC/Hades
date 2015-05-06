@@ -3,18 +3,17 @@ function mascara(o,f){
     v_fun=f
     setTimeout("execmascara()",1)
 }
-
 function execmascara(){
     v_obj.value=v_fun(v_obj.value)
 }
- function cpf(v){
+ function cpf_mask(v){
     v=v.replace(/\D/g,"")                   
     v=v.replace(/(\d{3})(\d)/,"$1.$2")       
     v=v.replace(/(\d{3})(\d)/,"$1.$2")                                            
     v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
     return v
 }
-function cep(v){
+function cep_mask(v){
     v=v.replace(/\D/g,"")       
     v=v.replace(/(\d{5})(\d{1,3})$/,"$1-$2")
     return v

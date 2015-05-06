@@ -6,9 +6,10 @@
 <head>
     <!-- Bootstrap Core CSS -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../resources/css/contratante.css" rel="stylesheet"/>
     <link href="../resources/css/form_style.css" rel="stylesheet"/>
+    <link href="../resources/css/barra_progresso.css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -19,14 +20,13 @@
         </div>
     </nav>
     <div class="caixa_barra_progresso" id="barra_de_progresso">
-       <ul class="barra_progresso"> 
-            <li class="visited first">
-                <a href="#">Entrar</a>
-            </li>
-            <li class="previous visited">Filtro</li>
-            <li class="previous visited">Cadastro de Contratante</li>
-            <li class="previous active">Cadastro do Falecido</li>
-            <li class="next">Pagamento</li>
+<ul class="barra_progresso">
+            <li class="visited first col-sm-2">Filtro de Processos</li>
+            <li class="previous visited col-sm-2">Cadastro de Contratante</li>
+            <li class="active col-sm-2">Cadastro de Falecido</li>
+            <li class="next col-sm-2">Dados do Óbito</li>
+            <li class="col-sm-2">Escolha de Produtos</li>
+            <li class="col-sm-2">Emissão de Notas</li>
         </ul>
     </div>
     <form action="salvar" method="POST">
@@ -37,50 +37,98 @@
 	                    <div class="over-shadow">
 	                        <div id="dadosPessoais">
 	                            <h1 class="titulo_caixa">Dados pessoais</h1>
-	                                <div class="row">
-	                                    <div class="col-md-6 col-xs-12">
-	                                        <div class="form-group">
-	                                            <label>CPF</label>
-	                                            <input class="form-control " name="cpf" id="cpf" onblur="buscaPorCpf()" placeholder="CPF" onkeypress="mascara(this,cpf)" maxlength="14">
-	                                        </div>
-	                                    </div>                             
-	                                </div>
-	                                <div class="row">
-	                                    <div class="col-sm-12">
-	                                        <div class="form-group">
-	                                            <label>Nome completo</label>
-	                                            <input  class="form-control" name="nomeCompleto" id="nomeCompleto" placeholder="Nome Completo">
-	                                        </div>
-	                                    </div>                        
-	                                </div>
-	                                <div class="row">
-	                                    <div class="col-md-4">
-	                                        <div class="form-group">
-	                                            <label>RG</label>
-	                                            <input  class="form-control" name="rg" id="rg" placeholder="RG">
-	                                        </div>
-	                                    </div>
-	                                    <div class="col-sm-8">
-	                                        <div class="form-group">
-	                                            <label>Nome da mãe</label>
-	                                            <input  class="form-control" name="nomeMae" id="nomeMae"  placeholder="Nome da mãe">
-	                                        </div>
-	                                    </div>                                
-	                                </div>
-	                                <div class="row">
-	                                    <div class="col-sm-6">
-	                                        <div class="form-group">
-	                                            <label>Profissão</label>
-	                                            <input  class="form-control" name="profissao" id="profissao" placeholder="Profissão">
-	                                        </div>
-	                                    </div>
-	                                    <div class="col-sm-6">
-	                                        <div class="form-group">
-	                                            <label>Parentesco</label>
-	                                            <input  class="form-control" name="grauParentesco" id="grauParentesco"  placeholder="Parentesco">
-	                                        </div>
-	                                    </div>
-	                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label>Nome completo</label>
+                                            <input  class="form-control" name="nomeCompleto" id="nomeCompleto" placeholder="Nome Completo">
+                                        </div>
+                                    </div>                        
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Naturalidade</label>
+                                            <input  class="form-control" name="naturalidade" id="naturalidade" placeholder="Naturalidade">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Profissão</label>
+                                            <input  class="form-control" name="profissao" id="profissao" placeholder="Profissão">
+                                        </div>
+                                    </div>                        
+                                </div>
+                                <div class="row">
+                                	<div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label>Documento</label>
+                                            <select  class="form-control" name="documento" id="documento">
+                                            	<option>RG</option>
+                                            	<option>RNE</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Número</label>
+                                            <input class="form-control" name="numeroDocumento" id="numeroDocumento" placeholder="Número do Documento">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>CPF</label>
+                                            <input class="form-control " name="cpf" id="cpf" placeholder="CPF" onkeypress="mascara(this,cpf_mask)" maxlength="14">
+                                        </div>
+                                    </div>                        
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <div class="form-group">
+                                            <label>Sexo</label>
+                                            <select  class="form-control" name="sexo" id="sexo">
+                                            	<option>M</option>
+                                            	<option>F</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Data de Nascimento</label>
+                                            <input  class="form-control" name="dataNascimento" id="dataNascimento"  placeholder="01/01/1900" onkeypress="mascara(this,data_mask)">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <div class="form-group">
+                                            <label>Idade</label>
+                                            <input  class="form-control" name="idade" id="idade"  placeholder="Idade">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Estado Civil</label>
+                                            <select  class="form-control" name="estadoCivil" id="estadoCivil">
+                                            	<option>Solteiro</option>
+                                            	<option>Casado</option>
+                                            	<option>Divorciado</option>
+                                            	<option>Viuvo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Cor</label>
+                                            <select  class="form-control" name="cor" id="cor">
+                                            	<option>Branca</option>
+                                            	<option>Parda</option>
+                                            	<option>Preta</option>
+                                            	<option>Amarela</option>
+                                            	<option>Indigena</option>
+                                            	<option>Desconhecida</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
 	                        </div>
 	                    </div>
 	                </div>
@@ -95,7 +143,7 @@
 	                                <div class="col-sm-6">
 	                                    <div class="form-group">
 	                                        <label>CEP</label>
-	                                        <input  class="form-control" name="cep" id="cep"  placeholder="CEP" onkeypress="mascara(this,cep)" maxlength="9">
+	                                        <input  class="form-control" name="cep" id="cep"  placeholder="CEP" onkeypress="mascara(this,cep_mask)" maxlength="9">
 	                                    </div>
 	                                </div>
 	                            </div>
@@ -215,5 +263,5 @@
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://raw.github.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.min.js"></script>
-<script type="text/javascript" src="../resources/js/contratante.js"></script>
+<script type="text/javascript" src="../resources/js/Util.js"></script>
 </html>

@@ -31,10 +31,7 @@ public class ContratanteController {
 		
 		contratante.setLocalizacao(localizacao);
 		ContratanteDao contratantedao = new ContratanteDao();
-		LocalizacaoDao localizacaodao = new LocalizacaoDao();
-		localizacaodao.inserir(localizacao);
 		contratantedao.inserir(contratante);
-		localizacaodao.close();
 		contratantedao.close();
 		
 		return "redirect:/falecido/formulario";

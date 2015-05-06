@@ -28,6 +28,6 @@ public class DadosObitoController {
 		dadosObitodao.inserir(dadosObito);
 		dadosObitodao.close();
 		
-		return "dadosObito/ok";
+		return "redirect:produtos/formulario";
 	}
 }

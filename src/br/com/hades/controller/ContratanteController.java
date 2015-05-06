@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.hades.dao.ContratanteDao;
-import br.com.hades.dao.LocalizacaoDao;
 import br.com.hades.model.Contratante;
 import br.com.hades.model.Localizacao;
 
@@ -24,7 +23,7 @@ public class ContratanteController {
 	
 
 	@RequestMapping("contratante/salvar")
-	public String salvar(@Valid Contratante contratante, BindingResult result, @ModelAttribute Localizacao localizacao) {
+	public String salvar(@Valid @ModelAttribute("contratante") Contratante contratante, BindingResult result, @ModelAttribute Localizacao localizacao) {
 		if (result.hasErrors()) {
 			return "contratante/formulario";
 		}
@@ -40,7 +39,7 @@ public class ContratanteController {
 	@ResponseBody
 	@RequestMapping("contratante/busca/cpf/{cpf}")
 	public Contratante buscaPorCpf(@PathVariable String cpf) {
-		ContratanteDao contratantedao = new ContratanteDao();
+		//ContratanteDao contratantedao = new ContratanteDao();
 		return Contratante.getFake();
 		//return contratantedao.buscaPorCpf(cpf);
 	}

@@ -28,13 +28,13 @@
         </ul>
     </div>
     <form action="salvar" method="post">
-		<div class="container" id="formulario-dados-pessoais">
-			<form:errors path="*" />
+    	<div class="container" id="formulario-dados-pessoais">
 			<div class="row col-md-12">
             	<div class="col-md-12">
             	    <div class="shadow">
             	        <div class="over-shadow">
                 	        <div id="dadosPessoais">
+                	        <p class="text-danger"><form:errors path="contratante.*"></form:errors></p>
                             <h1 class="titulo_caixa">Dados pessoais</h1>
 					  	      	<div class="row">
                                     <div class="col-md-6 col-xs-12">

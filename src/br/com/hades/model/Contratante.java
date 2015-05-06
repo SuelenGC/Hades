@@ -7,8 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(uniqueConstraints=@UniqueConstraint(columnNames = {"cpf"}))
@@ -41,16 +43,18 @@ public class Contratante {
 	@GeneratedValue
 	private Long id;
 
-	@NotNull 
+	@NotEmpty(message="{contratante.formulario.nomecompleto.empty}")
 	@Size(min=3, max=50, message="{contratante.formulario.nomecompleto.tamanho}")
 	private String nomeCompleto;
 	
-	@NotNull(message="{validacao.cpf.not.null}") 
+	@NotEmpty(message="{contratante.formulario.cpf.empty}")
 	private String cpf;
 	
-	@NotNull 
+	@Pattern(regexp="[0-9]+", message="contratante.formulario.rg.justnumbers")
+	@NotEmpty(message="{contratante.formulario.rg.empty}")
 	private String rg;
 	
+	@Size(min=2, max=50, message="{contratante.formulario.profissao.tamanho}")
 	private String profissao;
 	
 	private String grauParentesco;
@@ -61,7 +65,7 @@ public class Contratante {
 	
 	private String email;
 	
-	@NotNull	
+	@NotEmpty(message="{contratante.formulario.nomemae.empty}")
 	@Size(min=3, max=50, message="{contratante.formulario.nomemae.tamanho}")
 	private String nomeMae;
 	

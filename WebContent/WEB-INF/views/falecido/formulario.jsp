@@ -135,121 +135,279 @@
 	            </div>    
 	        </div>
 	        <div class="row col-md-12">
-	            <div class="col-md-8">
+	            <div class="col-md-7">
 	                <div class="shadow">
 	                    <div class="over-shadow">
 	                        <h1 class="titulo_caixa">Endereço</h1>
+	                        <div class="row">
+	                        	<div class="col-sm-9">
+	                            	<div class="form-group">
+	                                	<label>CEP</label>
+	                                    <input  class="form-control" name="cep" id="cep"  placeholder="CEP" onkeypress="mascara(this,cep_mask)" maxlength="9">
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-9">
+	                            	<div class="form-group">
+	                                	<label>Endereço</label>
+	                                    <input  class="form-control" name="endereco" id="endereco" placeholder="Endereço">
+	                                </div>
+	                            </div>
+	                            <div class="col-sm-3">
+	                        	    <div class="form-group">
+	                            	    <label>Número</label>
+	                                    <input type="number" class="form-control" name="numeroEndereco" id="numeroEndereco" placeholder="nº">
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-6">
+	                            	<div class="form-group">
+	                                	<label>Complemento</label>
+	                                	<input  class="form-control" name="complementoEndereco" id="complementoEndereco" placeholder="Complemento">
+	                                </div>
+	                            </div>
+	                            <div class="col-sm-6">
+	                            	<div class="form-group">
+	                                	<label>Bairro</label>
+	                                    <input  class="form-control" name="bairro" id="bairro" placeholder="Bairro">
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="row">
+	                            <div class="col-sm-9">
+	                            	<div class="form-group">
+	                                	<label>Cidade</label>
+	                                    <input  class="form-control" name="cidade" id="cidade" placeholder="Cidade">
+	                                </div>
+	                            </div>
+	                    		<div class="col-sm-3">
+	                            	<div class="form-group">
+	                                	<label>UF</label>
+	                                    <select name="estado" id="estado" class="form-control">
+	                                    <!--Adicionar estados com o controler-->
+	                                    	<option>AC</option>
+	                                        <option>AL</option>
+	                                        <option>AM</option>
+	                                        <option>AP</option>
+	                                        <option>BA</option>
+	                                        <option>CE</option>
+	                                        <option>DF</option>
+	                                        <option>ES</option>
+	                                        <option>GO</option>
+	                                        <option>MA</option>
+	                                        <option>MG</option>
+	                                        <option>MS</option>
+	                                        <option>MT</option>
+	                                        <option>PA</option>
+	                                        <option>PB</option>
+	                                        <option>PE</option>
+	                                        <option>PI</option>
+	                                        <option>PR</option>
+	                                        <option>RJ</option>
+	                                        <option>RN</option>
+	                                        <option>RO</option>
+	                                        <option>RR</option>
+	                                        <option>RS</option>
+	                                        <option>SC</option>
+	                                        <option>SE</option>
+	                                        <option>SP</option>
+	                                        <option>TO</option>
+	                                    </select>
+	                                </div>
+	                            </div>
+	                       </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-5">
+	                <div class="shadow">
+	                    <div class="over-shadow">
+	                        <h1 class="titulo_caixa">Informações Adicionais</h1>
 	                            <div class="row">
 	                                <div class="col-sm-6">
 	                                    <div class="form-group">
-	                                        <label>CEP</label>
-	                                        <input  class="form-control" name="cep" id="cep"  placeholder="CEP" onkeypress="mascara(this,cep_mask)" maxlength="9">
+	                                        <label>Altura(m)</label>
+	                                        <input  class="form-control" name="altura" id="altura" placeholder="Altura" maxlength="4">
+	                                    </div>
+	                                </div>
+	                                <div class="col-sm-6">
+	                                    <div class="form-group">
+	                                        <label>Peso(kg)</label>
+	                                        <input  class="form-control" name="peso" id="peso" placeholder="Peso" maxlength="6">
 	                                    </div>
 	                                </div>
 	                            </div>
 	                            <div class="row">
-	                                <div class="col-sm-5">
+	                            	<div class="col-sm-4">
 	                                    <div class="form-group">
-	                                        <label>Endereço</label>
-	                                        <input  class="form-control" name="endereco" id="endereco" placeholder="Endereço">
-	                                    </div>
+                                            <label>Bens a inventariar</label>
+                                            <select  class="form-control" name="bensAInventariar" id="bensAInventariar">
+                                            	<option>Sim</option>
+                                            	<option>Não</option>
+                                            </select>
+                                        </div>
 	                                </div>
-	                                <div class="col-sm-2">
+	                                <div class="col-sm-4">
 	                                    <div class="form-group">
-	                                        <label>Número</label>
-	                                        <input type="number" class="form-control" name="numeroEndereco" id="numeroEndereco" placeholder="nº">
-	                                    </div>
+                                            <label>Deixa Testamento</label>
+                                            <select  class="form-control" name="testamento" id="testamento">
+                                            	<option>Sim</option>
+                                            	<option>Não</option>
+                                            </select>
+                                        </div>
 	                                </div>
-	                                <div class="col-sm-5">
+	                                <div class="col-sm-4">
+	                                    <div class="form-group" style="margin-top:17%">
+                                            <label>Deixa Filhos</label>
+                                            <select  class="form-control" name="deixaFilhos" id="deixaFilhos">
+                                            	<option>Sim</option>
+                                            	<option>Não</option>
+                                            </select>
+                                        </div>
+	                                </div>
+	                          </div>
+	                            <div class="row">
+	                                <div class="col-sm-4">
 	                                    <div class="form-group">
-	                                        <label>Complemento</label>
-	                                        <input  class="form-control" name="complementoEndereco" id="complementoEndereco" placeholder="Complemento">
-	                                    </div>
+                                            <label>Marca Passo</label>
+                                            <select  class="form-control" name="marcaPasso" id="marcaPasso">
+                                            	<option>Sim</option>
+                                            	<option>Não</option>
+                                            </select>
+                                        </div>
+	                                </div>
+	                                <div class="col-sm-4">
+	                                    <div class="form-group">
+                                            <label>Eleitor</label>
+                                            <select  class="form-control" name="eleitor" id="eleitor">
+                                            	<option>Sim</option>
+                                            	<option>Não</option>
+                                            </select>
+                                        </div>
+	                                </div>
+	                                <div class="col-sm-4">
+	                                    <div class="form-group">
+                                            <label>Reservista</label>
+                                            <select  class="form-control" name="reservista" id="reservista">
+                                            	<option>Sim</option>
+                                            	<option>Não</option>
+                                            </select>
+                                        </div>
 	                                </div>
 	                            </div>
 	                            <div class="row">
-	                                <div class="col-sm-5">
+	                            	<div class="col-sm-4">
 	                                    <div class="form-group">
-	                                        <label>Bairro</label>
-	                                        <input  class="form-control" name="bairro" id="bairro" placeholder="Bairro">
-	                                    </div>
+                                            <label>INSS</label>
+                                            <select  class="form-control" name="inss" id="inss">
+                                            	<option>Sim</option>
+                                            	<option>Não</option>
+                                            </select>
+                                        </div>
 	                                </div>
-	                                <div class="col-sm-5">
+	                                <div class="col-sm-8">
 	                                    <div class="form-group">
-	                                        <label>Cidade</label>
-	                                        <input  class="form-control" name="cidade" id="cidade" placeholder="Cidade">
-	                                    </div>
-	                                </div>
-	                                <div class="col-sm-2">
-	                                    <div class="form-group">
-	                                        <label>UF</label>
-	                                        <select name="estado" id="estado" class="form-control">
-	                                        <!--Adicionar estados com o controler-->
-	                                            <option>AC</option>
-	                                            <option>AL</option>
-	                                            <option>AM</option>
-	                                            <option>AP</option>
-	                                            <option>BA</option>
-	                                            <option>CE</option>
-	                                            <option>DF</option>
-	                                            <option>ES</option>
-	                                            <option>GO</option>
-	                                            <option>MA</option>
-	                                            <option>MG</option>
-	                                            <option>MS</option>
-	                                            <option>MT</option>
-	                                            <option>PA</option>
-	                                            <option>PB</option>
-	                                            <option>PE</option>
-	                                            <option>PI</option>
-	                                            <option>PR</option>
-	                                            <option>RJ</option>
-	                                            <option>RN</option>
-	                                            <option>RO</option>
-	                                            <option>RR</option>
-	                                            <option>RS</option>
-	                                            <option>SC</option>
-	                                            <option>SE</option>
-	                                            <option>SP</option>
-	                                            <option>TO</option>
-	                                        </select>
+	                                        <label>Nº Beneficio</label>
+	                                        <input class="form-control" name="nBeneficio" id="nBeneficio" placeholder="Nº Beneficio">
 	                                    </div>
 	                                </div>
 	                            </div>
+                            </div>
 	                    </div>
 	                </div>
 	            </div>
-	            <div class="col-md-4">
-	                <div class="shadow">
-	                    <div class="over-shadow">
-	                        <h1 class="titulo_caixa">Contatos</h1>
-	                            <div class="row">
-	                                <div class="col-sm-12">
-	                                    <div class="form-group">
-	                                        <label>Tel Residencial</label>
-	                                        <input  class="form-control" name="telResidencial" id="telResidencial" placeholder="Tel Residencial" onkeypress="mascara(this,telefone)" maxlength="15">
+	            <div class="row col-md-12">
+		            <div class="col-md-12">
+		                <div class="shadow">
+		                    <div class="over-shadow">
+		                        <div id="dadosPais">
+		                            <h1 class="titulo_caixa">Dados dos Pais</h1>
+	                                <div class="row">
+	                                    <div class="col-sm-6">
+	                                        <div class="form-group">
+	                                            <label>Nome da mãe</label>
+	                                            <input  class="form-control" name="nomeDaMae" id="nomeDaMae" placeholder="Nome da mãe">
+	                                        </div>
 	                                    </div>
-	                                </div>
-	                            </div>
-	                            <div class="row">
-	                                <div class="col-sm-12">
-	                                    <div class="form-group">
-	                                        <label>Tel Celular</label>
-	                                        <input  class="form-control" name="telCelular" id="telCelular"  placeholder="Tel Celular" onkeypress="mascara(this,telefone)" maxlength="15">
+	                                    <div class="col-md-3">
+	                                        <div class="form-group">
+	                                            <label>Estado Civil</label>
+	                                            <select  class="form-control" name="estadoCivilMae" id="estadoCivilMae">
+	                                            	<option>Solteiro</option>
+	                                            	<option>Casado</option>
+	                                            	<option>Divorciado</option>
+	                                            	<option>Viuvo</option>
+	                                            </select>
+	                                        </div>
 	                                    </div>
+	                                    <div class="col-md-3">
+	                                        <div class="form-group">
+	                                           <label>Idade</label>
+	                                           <input  class="form-control" name="idadeMae" id="idadeMae" placeholder="Idade">
+	                                        </div>
+	                                    </div>                        
 	                                </div>
-	                            </div>
-	                            <div class="row">
-	                                <div class="col-sm-12">
-	                                    <div class="form-group">
-	                                        <label>Email</label>
-	                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+	                                <div class="row">
+	                                    <div class="col-sm-6">
+	                                        <div class="form-group">
+	                                            <label>Naturalidade</label>
+	                                            <input  class="form-control" name="naturalidadeMae" id="naturalidadeMae" placeholder="Naturalidade da Mãe">
+	                                        </div>
 	                                    </div>
+	                                    <div class="col-sm-6">
+	                                        <div class="form-group">
+	                                            <label>Profissão</label>
+	                                            <input  class="form-control" name="profissaoMae" id="profissaoMae" placeholder="Profissão da Mãe">
+	                                        </div>
+	                                    </div>                        
 	                                </div>
-	                            </div>
+	                                
+	                                <div class="row">
+	                                    <div class="col-sm-6">
+	                                        <div class="form-group">
+	                                            <label>Nome do Pai</label>
+	                                            <input  class="form-control" name="nomeDoPai" id="nomeDoPai" placeholder="Nome do Pai">
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-md-3">
+	                                        <div class="form-group">
+	                                            <label>Estado Civil</label>
+	                                            <select  class="form-control" name="estadoCivilPai" id="estadoCivilPai">
+	                                            	<option>Solteiro</option>
+	                                            	<option>Casado</option>
+	                                            	<option>Divorciado</option>
+	                                            	<option>Viuvo</option>
+	                                            </select>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-md-3">
+	                                        <div class="form-group">
+	                                           <label>Idade</label>
+	                                           <input  class="form-control" name="idadePai" id="idadePai" placeholder="Idade">
+	                                        </div>
+	                                    </div>                        
+	                                </div>
+	                                <div class="row">
+	                                    <div class="col-sm-6">
+	                                        <div class="form-group">
+	                                            <label>Naturalidade</label>
+	                                            <input  class="form-control" name="naturalidadePai" id="naturalidadePai" placeholder="Naturalidade do Pai">
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-sm-6">
+	                                        <div class="form-group">
+	                                            <label>Profissão</label>
+	                                            <input  class="form-control" name="profissaoPai" id="profissaoPai" placeholder="Profissão do Pai">
+	                                        </div>
+	                                    </div>                        
+	                                </div>
+		                        </div>
+		                    </div>
 	                    </div>
 	                </div>
-	            </div>
+	            </div>    
 	        </div>
 	        <div class="row col-md-12" id="botoes-navegacao">
 	            <div class="col-xs-12">

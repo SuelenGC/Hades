@@ -16,58 +16,58 @@ public class CompraDao {
 		em = factory.createEntityManager();
 	}
 
-	public boolean existe(Compra escolhaProduto) {
+	public boolean existe(Compra compra) {
 
-		if (escolhaProduto == null) {
+		if (compra == null) {
 			throw new IllegalArgumentException("EscolhaProduto não deve ser nulo");
 		}
 
 		try {
-			Compra contratanteEncontrado = em.find(Compra.class,
-					escolhaProduto.getId());
-			return contratanteEncontrado == null ? false : true;
+			Compra compraEncontrada = em.find(Compra.class,
+					compra.getId());
+			return compraEncontrada == null ? false : true;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	public void inserir(Compra escolhaProduto) {
+	public void inserir(Compra compra) {
 		em.getTransaction().begin();
-		em.persist(escolhaProduto);
+		em.persist(compra);
 		em.getTransaction().commit();
 	}
 
-	public void atualizar(Compra escolhaProduto) {
+	public void atualizar(Compra compra) {
 		em.getTransaction().begin();
-		em.merge(escolhaProduto);
+		em.merge(compra);
 		em.getTransaction().commit();
 	}
 
-	public void remover(Compra escolhaProduto) {
+	public void remover(Compra compra) {
 		em.getTransaction().begin();
-		em.remove(escolhaProduto);
+		em.remove(compra);
 		em.getTransaction().commit();
 	}
 	
-	public Compra buscaPorId(Compra escolhaProduto) {
+	public Compra buscaPorId(Compra compra) {
 
-		if (escolhaProduto == null) {
+		if (compra == null) {
 			throw new IllegalArgumentException("EscolhaProduto não deve ser nulo");
 		}
 
 		try {
-			Compra contratanteEncontrado = em.find(Compra.class,
-					escolhaProduto.getId());
-			return contratanteEncontrado;
+			Compra compraEncontrada = em.find(Compra.class,
+					compra.getId());
+			return compraEncontrada;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
 	
 	public Compra buscaPorId(Long id) {
-		Compra contratanteEncontrado = em.find(Compra.class,
+		Compra compraEncontrada = em.find(Compra.class,
 				id);
-		return contratanteEncontrado;
+		return compraEncontrada;
 	}
 
 	public void close() {

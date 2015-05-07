@@ -132,7 +132,6 @@ public class Contratante {
 		this.nomeMae = nomeMae;
 	}
 	
-	//@Embedded
 	public Localizacao getLocalizacao() {
 		return localizacao;
 	}

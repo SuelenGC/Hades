@@ -12,22 +12,23 @@ import br.com.hades.model.Compra;
 @Controller
 public class CompraController {
 
-	@RequestMapping("produto/formulario")
+	@RequestMapping("compra/formulario")
 	public String formulario() {
-		return "escolhaProduto/formulario";
+		return "compra/formulario";
 	}
 	
 
-	@RequestMapping("produto/salvar")
-	public String salvar(@Valid Compra escolhaProduto, BindingResult result) {
+	@RequestMapping("compra/salvar")
+	public String salvar(@Valid Compra compra, BindingResult result) {
 		if (result.hasErrors()) {
-			return "redirect:produto/formulario";
+			return "redirect:compra/formulario";
 		}
 		
-		CompraDao escolhaProdutodao = new CompraDao();
-		escolhaProdutodao.inserir(escolhaProduto);
-		escolhaProdutodao.close();
+		CompraDao compraDao = new CompraDao();
+		//compraDaodao.inserir(compraDao);
+		compraDao.inserir(Compra.getFake());
+		compraDao.close();
 		
-		return "redirect:produtos/formulario";
+		return "redirect:compra/formulario";
 	}
 }

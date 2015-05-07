@@ -1,10 +1,16 @@
 package br.com.hades.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 
 import br.com.hades.domain.DimensaoDeProduto;
 
@@ -14,15 +20,18 @@ public class Compra {
 	@GeneratedValue
 	private long id;
 	
+	@NotNull
 	private boolean remocaoCorpoNoLocalDeFalecimento;
 	
 	private String localRemocao;
 	private String enderecoRemocao;
 	
-	private DimensaoDeProduto urna; //TODO tirar daqui quando tiver a interface do produto com tamanho
-	private DimensaoDeProduto revestimento;
+	private boolean finalizada;
 	
-	ArrayList<ItemProduto> listaDeProdutos; //TODO usar interface
+	//@ManyToOne(cascade = CascadeType.ALL)
+	@ElementCollection
+    @CollectionTable 
+	List<ItemCompra> listaDeProdutos = new ArrayList<ItemCompra>();
 	
 	private double taxaAdicional;
 	
@@ -61,22 +70,6 @@ public class Compra {
 		this.enderecoRemocao = enderecoRemocao;
 	}
 
-	public DimensaoDeProduto getUrna() {						
-		return urna;
-	}
-
-	public void setUrna(DimensaoDeProduto urna) {
-		this.urna = urna;
-	}
-
-	public DimensaoDeProduto getRevestimento() {
-		return revestimento;
-	}
-
-	public void setRevestimento(DimensaoDeProduto revestimento) {
-		this.revestimento = revestimento;
-	}
-
 	public double getTaxaAdicional() {
 		return taxaAdicional;
 	}
@@ -95,19 +88,52 @@ public class Compra {
 
 	public Compra(boolean remocaoCorpoNoLocalDeFalecimento,
 			String localRemocao, String enderecoRemocao,
-			DimensaoDeProduto urna, DimensaoDeProduto revestimento,
 			double taxaAdicional, String observacoes) {
 		super();
 		this.remocaoCorpoNoLocalDeFalecimento = remocaoCorpoNoLocalDeFalecimento;
 		this.localRemocao = localRemocao;
 		this.enderecoRemocao = enderecoRemocao;
-		this.urna = urna;
-		this.revestimento = revestimento;
 		this.taxaAdicional = taxaAdicional;
 		this.observacoes = observacoes;
 	}
 	
+	
+	public Compra(boolean remocaoCorpoNoLocalDeFalecimento,
+			String localRemocao, String enderecoRemocao,
+			ArrayList<ItemCompra> listaDeProdutos, double taxaAdicional,
+			String observacoes) {
+		super();
+		this.remocaoCorpoNoLocalDeFalecimento = remocaoCorpoNoLocalDeFalecimento;
+		this.localRemocao = localRemocao;
+		this.enderecoRemocao = enderecoRemocao;
+		this.listaDeProdutos = listaDeProdutos;
+		this.taxaAdicional = taxaAdicional;
+		this.observacoes = observacoes;
+	}
+
 	public Compra() {
 		
+	}
+	
+	public boolean isFinalizada() {
+		return finalizada;
+	}
+
+	public void setFinalizada(boolean finalizada) {
+		this.finalizada = finalizada;
+	}
+
+	public List<ItemCompra> getListaDeProdutos() {
+		return listaDeProdutos;
+	}
+
+	public void setListaDeProdutos(ArrayList<ItemCompra> listaDeProdutos) {
+		this.listaDeProdutos = listaDeProdutos;
+	}
+
+	public static Compra getFake() {
+		ArrayList<ItemCompra> lista = new ArrayList<ItemCompra>();
+		lista.add(ItemCompra.getFake());
+		return new Compra(false, "Hospital X", "Rua X", lista, 1.0, "Bla");
 	}
 }

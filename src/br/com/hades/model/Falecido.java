@@ -99,6 +99,9 @@ public class Falecido {
 	
 	@NotNull
 	private boolean deixaFilhos;
+	
+	public Falecido() {
+	}
 
 	public Falecido(Long id, String nome, Sexo sexo, Cor cor,
 			String naturalidade, Calendar nascimento, String profissao,

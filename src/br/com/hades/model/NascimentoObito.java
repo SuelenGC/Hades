@@ -49,6 +49,10 @@ public class NascimentoObito {
 	
 	@NotNull
 	private String gravidez;
+	
+	public NascimentoObito() {
+		
+	}
 
 	public NascimentoObito(String localNascimento, Calendar dataNascimento,
 			String horarioNascimento, String avoPaterno, String avoMaterno,

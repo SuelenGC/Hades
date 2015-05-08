@@ -54,6 +54,10 @@ public class DadosObito {
 	private String crm;
 	
 	private String observacoes;
+	
+	public DadosObito() {
+		
+	}
 
 	public DadosObito(long id, String localFalecimento,
 			Calendar dataFalecimento, String cartorio,

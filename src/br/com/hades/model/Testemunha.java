@@ -27,6 +27,10 @@ public class Testemunha {
 	private String endereco;
 	
 	private String bairro;
+	
+	public Testemunha() {
+		
+	}
 
 	public Testemunha(Long id, String nome, EstadoCivil estado,
 			String nacionalidade, String profissao, String endereco,

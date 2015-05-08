@@ -28,6 +28,10 @@ public class CertidaoNascimento {
 	
 	private boolean nascObito;
 
+	public CertidaoNascimento() {
+		
+	}
+	
 	public CertidaoNascimento(String cartorio, String idade, Estado estado,
 			int livro, int folha, int numCertidao, boolean nascObito) {
 		super();

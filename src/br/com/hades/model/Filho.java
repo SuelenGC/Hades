@@ -17,7 +17,11 @@ public class Filho {
 	private CategoriaIdade idade;
 	
 	private String observacoes;
-
+	
+	public Filho() {
+		
+	}
+	
 	public Filho(Long id, String nome, CategoriaIdade idade, String observacoes) {
 		super();
 		this.id = id;

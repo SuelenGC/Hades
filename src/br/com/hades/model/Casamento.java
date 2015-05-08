@@ -37,6 +37,10 @@ public class Casamento {
 	private int folha;
 	
 	private int num;
+	
+	public Casamento() {
+		
+	}
 
 	public Casamento(Long id, String nome, Calendar dataCasamento, String cartorio,
 			String cidade, Estado uf, int livro, int folha, int num) {

@@ -25,8 +25,8 @@ public class CompraController {
 		}
 		
 		CompraDao compraDao = new CompraDao();
-		//compraDaodao.inserir(compraDao);
-		compraDao.inserir(Compra.getFake());
+		compraDao.inserir(compra);
+		//compraDao.inserir(Compra.getFake());
 		compraDao.close();
 		
 		return "redirect:compra/formulario";
